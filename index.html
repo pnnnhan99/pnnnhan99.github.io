@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="pnnnhan99 — Backend developer (Laravel, Node.js) transitioning into Python & AI. Architecting the future with Lonoup.com." />
+  <meta name="theme-color" content="#05070a" />
+  <title>pnnnhan99 — Architecting the Future with Laravel, Node.js &amp; AI</title>
+
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%82%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            void: '#05070a',
+            panel: '#0a0e14',
+            line: '#161d29',
+            cyan: { glow: '#22d3ee', deep: '#0ea5e9' },
+            matrix: '#4ade80',
+            ghost: '#8b9bb4'
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-void text-slate-200 font-display antialiased selection:bg-cyan-glow/30 selection:text-white">
+
+  <div id="progress-bar"
+    class="fixed top-0 left-0 h-[2px] w-0 bg-gradient-to-r from-cyan-glow via-cyan-deep to-matrix z-[60]"></div>
+
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 border-b border-transparent">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="#hero" class="group flex items-center gap-2.5">
+          <span
+            class="relative flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-glow/40 bg-cyan-glow/10 font-mono text-sm font-bold text-cyan-glow transition group-hover:shadow-[0_0_20px_rgba(34,211,238,0.45)]">∞</span>
+          <span class="font-mono text-sm font-semibold tracking-tight text-white">lonoup<span
+              class="text-cyan-glow">.</span>com</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-1">
+          <a href="#about"
+            class="nav-link px-4 py-2 text-sm text-ghost hover:text-white transition rounded-md">About</a>
+          <a href="#stack"
+            class="nav-link px-4 py-2 text-sm text-ghost hover:text-white transition rounded-md">Stack</a>
+          <a href="#projects"
+            class="nav-link px-4 py-2 text-sm text-ghost hover:text-white transition rounded-md">Projects</a>
+          <a href="#contact"
+            class="nav-link px-4 py-2 text-sm text-ghost hover:text-white transition rounded-md">Contact</a>
+          <a href="https://github.com/pnnnhan99" target="_blank" rel="noopener noreferrer"
+            class="ml-3 inline-flex items-center gap-2 rounded-lg border border-line bg-panel px-4 py-2 text-sm text-white hover:border-cyan-glow/50 hover:text-cyan-glow transition">
+            <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z" />
+            </svg>
+            GitHub
+          </a>
+        </div>
+
+        <button id="menu-btn"
+          class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg border border-line bg-panel text-ghost"
+          aria-label="Toggle menu" aria-expanded="false">
+          <svg id="icon-open" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg id="icon-close" class="h-5 w-5 hidden" fill="none" stroke="currentColor" stroke-width="1.8"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden hidden border-t border-line bg-void/95 backdrop-blur-xl">
+      <div class="px-5 py-4 flex flex-col gap-1">
+        <a href="#about"
+          class="mobile-link rounded-lg px-4 py-3 text-ghost hover:text-white hover:bg-panel transition">About</a>
+        <a href="#stack"
+          class="mobile-link rounded-lg px-4 py-3 text-ghost hover:text-white hover:bg-panel transition">Stack</a>
+        <a href="#projects"
+          class="mobile-link rounded-lg px-4 py-3 text-ghost hover:text-white hover:bg-panel transition">Projects</a>
+        <a href="#contact"
+          class="mobile-link rounded-lg px-4 py-3 text-ghost hover:text-white hover:bg-panel transition">Contact</a>
+        <a href="https://github.com/pnnnhan99" target="_blank" rel="noopener noreferrer"
+          class="mobile-link mt-2 rounded-lg border border-line bg-panel px-4 py-3 text-center text-white">GitHub ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="hero" class="relative min-h-screen flex items-center overflow-hidden">
+      <canvas id="node-canvas" class="absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
+      <div class="absolute inset-0 bg-gradient-to-b from-void/40 via-void/70 to-void pointer-events-none"
+        aria-hidden="true"></div>
+      <div
+        class="absolute top-1/4 left-1/2 -translate-x-1/2 h-[500px] w-[900px] rounded-full bg-cyan-glow/10 blur-[140px] pointer-events-none"
+        aria-hidden="true"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 w-full pt-28 pb-20">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7">
+            <div
+              class="hero-badge inline-flex items-center gap-2 rounded-full border border-cyan-glow/30 bg-cyan-glow/5 px-4 py-1.5 font-mono text-xs text-cyan-glow mb-7">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-matrix opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-matrix"></span>
+              </span>
+              Open to open-source collaboration
+            </div>
+
+            <p class="hero-line font-mono text-sm text-matrix mb-4">$ whoami</p>
+
+            <h1 class="hero-line text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.05]">
+              pnnnhan<span class="text-cyan-glow">99</span><span class="text-cyan-glow animate-blink">_</span>
+            </h1>
+
+            <p class="hero-line mt-6 text-xl sm:text-2xl lg:text-3xl font-light text-slate-300 leading-snug max-w-2xl">
+              Architecting the Future with
+              <span class="text-white font-medium">Laravel</span>,
+              <span class="text-white font-medium">Node.js</span>
+              &amp;
+              <span
+                class="bg-gradient-to-r from-cyan-glow to-matrix bg-clip-text text-transparent font-semibold">AI</span>.
+            </p>
+
+            <p class="hero-line mt-6 text-base sm:text-lg text-ghost max-w-xl leading-relaxed">
+              Backend engineer building multi-user systems, now weaving Python and AI into real-world
+              applications — one loop, one node, at a time.
+            </p>
+
+            <div class="hero-line mt-9 flex flex-wrap gap-4">
+              <a href="#projects"
+                class="group relative inline-flex items-center gap-2 rounded-xl bg-cyan-glow px-7 py-3.5 font-medium text-void hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] transition-all duration-300">
+                View My Work
+                <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+                  stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+              <a href="#contact"
+                class="inline-flex items-center gap-2 rounded-xl border border-line bg-panel/60 px-7 py-3.5 font-medium text-white hover:border-cyan-glow/50 hover:bg-panel transition">
+                Connect With Me
+              </a>
+            </div>
+
+            <div class="hero-line mt-12 grid grid-cols-3 gap-6 max-w-md border-t border-line pt-6">
+              <div>
+                <p class="text-2xl font-bold text-white">∞</p>
+                <p class="mt-1 font-mono text-[11px] uppercase tracking-wider text-ghost">Loops shipped</p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-white">OSS</p>
+                <p class="mt-1 font-mono text-[11px] uppercase tracking-wider text-ghost">Contributor</p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-white">AI ⇄ BE</p>
+                <p class="mt-1 font-mono text-[11px] uppercase tracking-wider text-ghost">In transition</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 hero-visual">
+            <div class="relative mx-auto max-w-md">
+              <div
+                class="absolute -inset-6 rounded-3xl bg-gradient-to-tr from-cyan-glow/20 via-transparent to-matrix/20 blur-2xl"
+                aria-hidden="true"></div>
+
+              <div
+                class="relative rounded-2xl border border-line bg-panel/80 backdrop-blur-xl shadow-2xl overflow-hidden">
+                <div class="flex items-center gap-2 border-b border-line px-4 py-3">
+                  <span class="h-3 w-3 rounded-full bg-[#ff5f57]"></span>
+                  <span class="h-3 w-3 rounded-full bg-[#febc2e]"></span>
+                  <span class="h-3 w-3 rounded-full bg-[#28c840]"></span>
+                  <span class="ml-3 font-mono text-xs text-ghost">~/lonoup/core</span>
+                </div>
+                <div class="p-5 font-mono text-[13px] leading-relaxed space-y-2.5">
+                  <p><span class="text-matrix">→</span> <span class="text-ghost">php artisan</span> <span
+                      class="text-cyan-glow">lonoup:loop</span></p>
+                  <p><span class="text-matrix">✓</span> <span class="text-slate-300">Laravel services bound</span></p>
+                  <p><span class="text-matrix">✓</span> <span class="text-slate-300">Node cluster online</span></p>
+                  <p><span class="text-matrix">✓</span> <span class="text-slate-300">Python model warmed</span></p>
+                  <p><span class="text-matrix">→</span> <span class="text-ghost">python</span> <span
+                      class="text-cyan-glow">agent.run()</span></p>
+                  <p><span class="text-matrix">✓</span> <span class="text-slate-300">AI pipeline attached</span></p>
+                  <p class="text-white pt-1">$ <span class="animate-pulse text-matrix">building the legacy_</span></p>
+                </div>
+              </div>
+
+              <svg class="absolute -bottom-8 -left-6 w-28 h-28 text-cyan-glow/70 float-slow" viewBox="0 0 200 100"
+                fill="none" aria-hidden="true">
+                <path
+                  d="M50 50c0-22 18-40 40-40s40 18 40 40-18 40-40 40-40-18-40-40Zm60 0c0 22 18 40 40 40s40-18 40-40-18-40-40-40-40 18-40 40Z"
+                  stroke="currentColor" stroke-width="6" stroke-linecap="round" class="loop-draw" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about"
+        class="absolute bottom-7 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-ghost hover:text-cyan-glow transition"
+        aria-label="Scroll to about">
+        <span class="font-mono text-[10px] uppercase tracking-[0.25em]">scroll</span>
+        <span class="h-9 w-5 rounded-full border border-current flex justify-start p-1">
+          <span class="h-1.5 w-1.5 rounded-full bg-current animate-scroll-dot"></span>
+        </span>
+      </a>
+    </section>
+
+    <section id="about" class="relative py-24 md:py-32 border-t border-line">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="reveal">
+          <p class="font-mono text-xs uppercase tracking-[0.3em] text-cyan-glow mb-4">01 — About</p>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+            The journey &amp; the <span
+              class="bg-gradient-to-r from-cyan-glow to-matrix bg-clip-text text-transparent">Lonoup</span> philosophy
+          </h2>
+        </div>
+
+        <div class="mt-14 grid lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-7 space-y-6 reveal">
+            <p class="text-lg text-slate-300 leading-relaxed">
+              I'm <strong class="text-white">pnnnhan99</strong> — a backend developer passionate about building clean,
+              efficient, and logical systems. My core foundation is built on <span class="text-cyan-glow">Laravel</span>
+              and <span class="text-cyan-glow">Node.js</span>, which have taught me how to architect scalable
+              applications and maintain reliable codebases.
+            </p>
+            <p class="text-lg text-slate-300 leading-relaxed">
+              Currently, I am expanding my focus into <span class="text-matrix">Python</span> and <span
+                class="text-matrix">AI integration</span>. My goal is to combine robust backend architectures with AI to
+              build smarter, practical applications that can adapt and genuinely assist people in their daily lives.
+            </p>
+            <p class="text-lg text-slate-300 leading-relaxed">
+              Beyond just writing code, my long-term vision is to become a trusted contributor in the programming
+              community. I aim to build useful multi-user platforms, actively support Open Source projects, and create
+              <span class="text-white">sustainable software</span> that brings lasting value to others.
+            </p>
+
+            <div class="grid sm:grid-cols-3 gap-4 pt-4">
+              <div class="rounded-xl border border-line bg-panel p-5 hover:border-cyan-glow/40 transition">
+                <p class="font-mono text-2xl text-cyan-glow">01</p>
+                <p class="mt-2 text-sm text-slate-300">Develop multi-user applications that solve real-world problems.
+                </p>
+              </div>
+              <div class="rounded-xl border border-line bg-panel p-5 hover:border-cyan-glow/40 transition">
+                <p class="font-mono text-2xl text-cyan-glow">02</p>
+                <p class="mt-2 text-sm text-slate-300">Actively share knowledge and contribute to Open Source.</p>
+              </div>
+              <div class="rounded-xl border border-line bg-panel p-5 hover:border-cyan-glow/40 transition">
+                <p class="font-mono text-2xl text-cyan-glow">03</p>
+                <p class="mt-2 text-sm text-slate-300">Build sustainable software that creates lasting, practical value.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 reveal">
+            <div
+              class="relative rounded-2xl border border-line bg-gradient-to-b from-panel to-void p-8 h-full overflow-hidden">
+              <div class="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-cyan-glow/10 blur-3xl"
+                aria-hidden="true"></div>
+
+              <div class="relative">
+                <div class="flex items-center gap-3 mb-7">
+                  <span
+                    class="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-glow/10 border border-cyan-glow/30 text-cyan-glow font-mono text-lg">∞</span>
+                  <div>
+                    <p class="text-white font-semibold tracking-tight">Lonoup</p>
+                    <p class="font-mono text-xs text-ghost">Loop × Node</p>
+                  </div>
+                </div>
+
+                <div class="space-y-5">
+                  <div class="flex gap-4">
+                    <span
+                      class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-cyan-glow shadow-[0_0_10px_#22d3ee]"></span>
+                    <div>
+                      <p class="text-white font-medium">Lo — The Loop</p>
+                      <p class="text-sm text-ghost leading-relaxed mt-1">The cycle of continuous learning. Every
+                        challenge is an opportunity to iterate, improve, and refine the craft of programming.</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-4">
+                    <span class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-matrix shadow-[0_0_10px_#4ade80]"></span>
+                    <div>
+                      <p class="text-white font-medium">No — The Node</p>
+                      <p class="text-sm text-ghost leading-relaxed mt-1">The points of connection. It represents linking
+                        complex systems seamlessly and connecting with the broader developer community.</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-4">
+                    <span class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-white shadow-[0_0_10px_#fff]"></span>
+                    <div>
+                      <p class="text-white font-medium">∞ — The Outcome</p>
+                      <p class="text-sm text-ghost leading-relaxed mt-1">Blending steady iteration with meaningful
+                        connections to build software that grows, adapts, and serves its users well over time.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-8 rounded-xl border border-line bg-void/70 p-4 font-mono text-xs text-ghost">
+                  <span class="text-matrix">const</span> value = <span class="text-cyan-glow">lonoup</span>(<span
+                    class="text-white">connect</span>(community));
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" class="relative py-24 md:py-32 border-t border-line bg-panel/30">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="reveal max-w-3xl">
+          <p class="font-mono text-xs uppercase tracking-[0.3em] text-cyan-glow mb-4">02 — Stack</p>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">Tools I build with</h2>
+          <p class="mt-5 text-lg text-ghost leading-relaxed">
+            A battle-tested backend core, actively being extended with the languages and tooling of the AI era.
+          </p>
+        </div>
+
+        <div class="mt-14 grid md:grid-cols-3 gap-6">
+          <article
+            class="skill-card group rounded-2xl border border-line bg-void/80 p-7 hover:border-cyan-glow/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
+            <div class="flex items-center justify-between">
+              <span
+                class="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-glow/10 border border-cyan-glow/30 text-cyan-glow">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </span>
+              <span class="font-mono text-xs text-ghost">// backend</span>
+            </div>
+            <h3 class="mt-5 text-xl font-semibold text-white">Backend</h3>
+            <p class="mt-2 text-sm text-ghost leading-relaxed">Robust APIs, authentication, queues, and architecture
+              that stays clean as products grow.</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="tag">Laravel</span>
+              <span class="tag">PHP</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">REST / API</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Redis</span>
+            </div>
+            <div class="mt-6 h-1.5 rounded-full bg-line overflow-hidden">
+              <div class="skill-bar h-full rounded-full bg-gradient-to-r from-cyan-deep to-cyan-glow" data-level="92%">
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="skill-card group rounded-2xl border border-line bg-void/80 p-7 hover:border-matrix/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
+            <div class="flex items-center justify-between">
+              <span
+                class="flex h-12 w-12 items-center justify-center rounded-xl bg-matrix/10 border border-matrix/30 text-matrix">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="3" />
+                  <path stroke-linecap="round"
+                    d="M12 2v4m0 12v4M2 12h4m12 0h4M5 5l2.8 2.8M16.2 16.2 19 19M19 5l-2.8 2.8M7.8 16.2 5 19" />
+                </svg>
+              </span>
+              <span class="font-mono text-xs text-ghost">// intelligence</span>
+            </div>
+            <h3 class="mt-5 text-xl font-semibold text-white">AI &amp; Data</h3>
+            <p class="mt-2 text-sm text-ghost leading-relaxed">Bridging production backends with models, agents, and
+              data pipelines that ship real value.</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="tag tag-green">Python</span>
+              <span class="tag tag-green">AI Integration</span>
+              <span class="tag tag-green">LLM APIs</span>
+              <span class="tag tag-green">Automation</span>
+              <span class="tag tag-green">Data Pipelines</span>
+            </div>
+            <div class="mt-6 h-1.5 rounded-full bg-line overflow-hidden">
+              <div class="skill-bar h-full rounded-full bg-gradient-to-r from-emerald-600 to-matrix" data-level="78%">
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="skill-card group rounded-2xl border border-line bg-void/80 p-7 hover:border-cyan-deep/60 transition-all duration-300 hover:-translate-y-1.5 reveal">
+            <div class="flex items-center justify-between">
+              <span
+                class="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M14.7 6.3a5 5 0 1 0-7.4 7.4L3 18l3 3 4.3-4.3a5 5 0 0 0 7.4-7.4l-3 3-2.3-2.3 3-3Z" />
+                </svg>
+              </span>
+              <span class="font-mono text-xs text-ghost">// workflow</span>
+            </div>
+            <h3 class="mt-5 text-xl font-semibold text-white">Tools &amp; Open Source</h3>
+            <p class="mt-2 text-sm text-ghost leading-relaxed">The daily toolkit for collaborating in public and keeping
+              delivery fast and reliable.</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="tag tag-blue">Git</span>
+              <span class="tag tag-blue">GitHub</span>
+              <span class="tag tag-blue">Linux</span>
+              <span class="tag tag-blue">Docker</span>
+              <span class="tag tag-blue">CI / CD</span>
+              <span class="tag tag-blue">OSS Workflow</span>
+            </div>
+            <div class="mt-6 h-1.5 rounded-full bg-line overflow-hidden">
+              <div class="skill-bar h-full rounded-full bg-gradient-to-r from-sky-700 to-sky-400" data-level="88%">
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-12 overflow-hidden rounded-2xl border border-line bg-void/60 py-4 reveal">
+          <div class="marquee font-mono text-sm text-ghost whitespace-nowrap">
+            <span class="mx-6 text-cyan-glow">◆</span><span>Laravel</span>
+            <span class="mx-6 text-cyan-glow">◆</span><span>Node.js</span>
+            <span class="mx-6 text-cyan-glow">◆</span><span>Python</span>
+            <span class="mx-6 text-cyan-glow">◆</span><span>AI Integration</span>
+            <span class="mx-6 text-cyan-glow">◆</span><span>Open Source</span>
+            <span class="mx-6 text-cyan-glow">◆</span><span>Git</span>
+            <span class="mx-6 text-cyan-glow">◆</span><span>REST APIs</span>
+            <span class="mx-6 text-cyan-glow">◆</span><span>Multi-user Systems</span>
+            <span class="mx-6 text-cyan-glow">◆</span><span>Laravel</span>
+            <span class="mx-6 text-cyan-glow">◆</span><span>Node.js</span>
+            <span class="mx-6 text-cyan-glow">◆</span><span>Python</span>
+            <span class="mx-6 text-cyan-glow">◆</span><span>AI Integration</span>
+            <span class="mx-6 text-cyan-glow">◆</span><span>Open Source</span>
+            <span class="mx-6 text-cyan-glow">◆</span><span>Git</span>
+            <span class="mx-6 text-cyan-glow">◆</span><span>REST APIs</span>
+            <span class="mx-6 text-cyan-glow">◆</span><span>Multi-user Systems</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="relative py-24 md:py-32 border-t border-line">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 reveal">
+          <div class="max-w-2xl">
+            <p class="font-mono text-xs uppercase tracking-[0.3em] text-cyan-glow mb-4">03 — Projects</p>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">Open source &amp; builds
+            </h2>
+            <p class="mt-5 text-lg text-ghost leading-relaxed">
+              A GitHub-style showcase of systems, experiments, and initiatives — from Laravel platforms to AI-assisted
+              tooling.
+            </p>
+          </div>
+          <a href="https://github.com/pnnnhan99" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 self-start rounded-xl border border-line bg-panel px-5 py-3 text-sm text-white hover:border-cyan-glow/50 hover:text-cyan-glow transition">
+            View full profile
+            <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article
+            class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-cyan-glow/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
+            <div
+              class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-cyan-glow to-cyan-deep group-hover:w-full transition-all duration-500">
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between">
+                <span
+                  class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-cyan-glow text-sm">repo</span>
+                <span
+                  class="inline-flex items-center gap-1.5 rounded-full border border-matrix/30 bg-matrix/10 px-2.5 py-1 font-mono text-[10px] text-matrix">
+                  <span class="h-1.5 w-1.5 rounded-full bg-matrix"></span> active
+                </span>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-cyan-glow transition">lonoup-core</h3>
+              <p class="mt-2 text-sm text-ghost leading-relaxed">
+                The open-source backbone of the Lonoup ecosystem — modular Laravel services, queue-driven jobs, and a
+                plugin architecture designed for multi-tenant products.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="tag">Laravel</span>
+                <span class="tag">PHP</span>
+                <span class="tag">Redis</span>
+              </div>
+              <div
+                class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
+                <span class="inline-flex items-center gap-1.5"><span
+                    class="h-2.5 w-2.5 rounded-full bg-amber-400"></span> PHP</span>
+                <span class="inline-flex items-center gap-3">
+                  <span>★ 128</span>
+                  <span>⑂ 24</span>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-cyan-glow/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
+            <div
+              class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-cyan-glow to-cyan-deep group-hover:w-full transition-all duration-500">
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between">
+                <span
+                  class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-cyan-glow text-sm">repo</span>
+                <span
+                  class="inline-flex items-center gap-1.5 rounded-full border border-matrix/30 bg-matrix/10 px-2.5 py-1 font-mono text-[10px] text-matrix">
+                  <span class="h-1.5 w-1.5 rounded-full bg-matrix"></span> active
+                </span>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-cyan-glow transition">neural-desk</h3>
+              <p class="mt-2 text-sm text-ghost leading-relaxed">
+                An AI-assisted workspace that plugs LLM reasoning into everyday backend workflows — summarization,
+                triage, and intelligent automation for support teams.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="tag tag-green">Python</span>
+                <span class="tag tag-green">AI Integration</span>
+                <span class="tag">Node.js</span>
+              </div>
+              <div
+                class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
+                <span class="inline-flex items-center gap-1.5"><span
+                    class="h-2.5 w-2.5 rounded-full bg-[#3572A5]"></span> Python</span>
+                <span class="inline-flex items-center gap-3">
+                  <span>★ 96</span>
+                  <span>⑂ 18</span>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-cyan-glow/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
+            <div
+              class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-cyan-glow to-cyan-deep group-hover:w-full transition-all duration-500">
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between">
+                <span
+                  class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-cyan-glow text-sm">repo</span>
+                <span
+                  class="inline-flex items-center gap-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 px-2.5 py-1 font-mono text-[10px] text-sky-400">
+                  <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span> beta
+                </span>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-cyan-glow transition">nexus-api</h3>
+              <p class="mt-2 text-sm text-ghost leading-relaxed">
+                A high-throughput Node.js gateway unifying services behind one auth layer — rate limiting, WebSockets,
+                and observability built in from day one.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="tag tag-blue">Node.js</span>
+                <span class="tag tag-blue">Express</span>
+                <span class="tag">WebSockets</span>
+              </div>
+              <div
+                class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
+                <span class="inline-flex items-center gap-1.5"><span
+                    class="h-2.5 w-2.5 rounded-full bg-[#f1e05a]"></span> JavaScript</span>
+                <span class="inline-flex items-center gap-3">
+                  <span>★ 74</span>
+                  <span>⑂ 15</span>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-cyan-glow/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
+            <div
+              class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-cyan-glow to-cyan-deep group-hover:w-full transition-all duration-500">
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between">
+                <span
+                  class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-matrix text-sm">oss</span>
+                <span
+                  class="inline-flex items-center gap-1.5 rounded-full border border-matrix/30 bg-matrix/10 px-2.5 py-1 font-mono text-[10px] text-matrix">
+                  <span class="h-1.5 w-1.5 rounded-full bg-matrix"></span> ongoing
+                </span>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-cyan-glow transition">opencontrib</h3>
+              <p class="mt-2 text-sm text-ghost leading-relaxed">
+                My contribution hub — curated issues, maintained packages, and write-ups that help other developers
+                navigate first-time Open Source contributions.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="tag tag-green">Open Source</span>
+                <span class="tag">Git</span>
+                <span class="tag">Docs</span>
+              </div>
+              <div
+                class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
+                <span class="inline-flex items-center gap-1.5"><span class="h-2.5 w-2.5 rounded-full bg-matrix"></span>
+                  Multi-lang</span>
+                <span class="inline-flex items-center gap-3">
+                  <span>★ 52</span>
+                  <span>⑂ 31</span>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-cyan-glow/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
+            <div
+              class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-cyan-glow to-cyan-deep group-hover:w-full transition-all duration-500">
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between">
+                <span
+                  class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-cyan-glow text-sm">repo</span>
+                <span
+                  class="inline-flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 px-2.5 py-1 font-mono text-[10px] text-amber-400">
+                  <span class="h-1.5 w-1.5 rounded-full bg-amber-400"></span> building
+                </span>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-cyan-glow transition">loopqueue</h3>
+              <p class="mt-2 text-sm text-ghost leading-relaxed">
+                A resilient job orchestration layer for Laravel and Node workers — retries, priorities, and dashboards
+                that make background processing observable.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="tag">Laravel</span>
+                <span class="tag tag-blue">Node.js</span>
+                <span class="tag">Queues</span>
+              </div>
+              <div
+                class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
+                <span class="inline-flex items-center gap-1.5"><span
+                    class="h-2.5 w-2.5 rounded-full bg-amber-400"></span> TypeScript</span>
+                <span class="inline-flex items-center gap-3">
+                  <span>★ 41</span>
+                  <span>⑂ 9</span>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-cyan-glow/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
+            <div
+              class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-cyan-glow to-cyan-deep group-hover:w-full transition-all duration-500">
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between">
+                <span
+                  class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-cyan-glow text-sm">repo</span>
+                <span
+                  class="inline-flex items-center gap-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 px-2.5 py-1 font-mono text-[10px] text-sky-400">
+                  <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span> planning
+                </span>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-cyan-glow transition">life-loop</h3>
+              <p class="mt-2 text-sm text-ghost leading-relaxed">
+                A life-enhancing, multi-user application pairing Python analytics with adaptive AI suggestions — habits,
+                goals, and community accountability in one loop.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="tag tag-green">Python</span>
+                <span class="tag">Laravel</span>
+                <span class="tag tag-green">AI</span>
+              </div>
+              <div
+                class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
+                <span class="inline-flex items-center gap-1.5"><span
+                    class="h-2.5 w-2.5 rounded-full bg-[#3572A5]"></span> Python</span>
+                <span class="inline-flex items-center gap-3">
+                  <span>★ 29</span>
+                  <span>⑂ 6</span>
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="relative py-24 md:py-32 border-t border-line overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-panel/40 via-void to-void pointer-events-none"
+        aria-hidden="true"></div>
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[700px] rounded-full bg-cyan-glow/8 blur-[130px] pointer-events-none"
+        aria-hidden="true"></div>
+
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="max-w-3xl mx-auto text-center reveal">
+          <p class="font-mono text-xs uppercase tracking-[0.3em] text-cyan-glow mb-4">04 — Contact</p>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+            Let's build the <span
+              class="bg-gradient-to-r from-cyan-glow to-matrix bg-clip-text text-transparent">lonoup</span> together
+          </h2>
+          <p class="mt-5 text-lg text-ghost leading-relaxed">
+            Collaboration, open-source ideas, or just a technical conversation — every great node starts with a single
+            connection.
+          </p>
+        </div>
+
+        <div class="mt-14 grid md:grid-cols-3 gap-5 max-w-4xl mx-auto">
+          <a href="https://github.com/pnnnhan99" target="_blank" rel="noopener noreferrer"
+            class="group rounded-2xl border border-line bg-panel/70 p-6 text-center hover:border-cyan-glow/50 hover:-translate-y-1.5 transition-all duration-300 reveal">
+            <span
+              class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-void border border-line text-white group-hover:text-cyan-glow group-hover:border-cyan-glow/40 transition">
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z" />
+              </svg>
+            </span>
+            <p class="mt-4 font-semibold text-white">GitHub</p>
+            <p class="mt-1 font-mono text-xs text-ghost">@pnnnhan99</p>
+          </a>
+
+          <a href="https://lonoup.com" target="_blank" rel="noopener noreferrer"
+            class="group rounded-2xl border border-line bg-panel/70 p-6 text-center hover:border-matrix/50 hover:-translate-y-1.5 transition-all duration-300 reveal">
+            <span
+              class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-void border border-line font-mono text-lg text-white group-hover:text-matrix group-hover:border-matrix/40 transition">∞</span>
+            <p class="mt-4 font-semibold text-white">lonoup.com</p>
+            <p class="mt-1 font-mono text-xs text-ghost">coming soon</p>
+          </a>
+
+          <a href="mailto:hello@lonoup.com"
+            class="group rounded-2xl border border-line bg-panel/70 p-6 text-center hover:border-cyan-deep/60 hover:-translate-y-1.5 transition-all duration-300 reveal">
+            <span
+              class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-void border border-line text-white group-hover:text-sky-400 group-hover:border-sky-500/40 transition">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path stroke-linecap="round" d="m3 7 9 6 9-6" />
+              </svg>
+            </span>
+            <p class="mt-4 font-semibold text-white">Email</p>
+            <p class="mt-1 font-mono text-xs text-ghost">hello@lonoup.com</p>
+          </a>
+        </div>
+
+        <div class="mt-12 max-w-2xl mx-auto reveal">
+          <form id="contact-form" class="rounded-2xl border border-line bg-panel/70 p-6 sm:p-8 backdrop-blur-sm">
+            <p class="font-mono text-xs text-ghost mb-5">// send a signal — goes straight to your mail client</p>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="name" class="block font-mono text-xs text-ghost mb-2">NAME</label>
+                <input id="name" name="name" type="text" required placeholder="Ada Lovelace"
+                  class="w-full rounded-lg border border-line bg-void px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-cyan-glow/60 transition" />
+              </div>
+              <div>
+                <label for="email" class="block font-mono text-xs text-ghost mb-2">EMAIL</label>
+                <input id="email" name="email" type="email" required placeholder="ada@dev.io"
+                  class="w-full rounded-lg border border-line bg-void px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-cyan-glow/60 transition" />
+              </div>
+            </div>
+            <div class="mt-4">
+              <label for="message" class="block font-mono text-xs text-ghost mb-2">MESSAGE</label>
+              <textarea id="message" name="message" rows="4" required
+                placeholder="Let's talk about open source, AI, or your next product..."
+                class="w-full rounded-lg border border-line bg-void px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-cyan-glow/60 transition resize-none"></textarea>
+            </div>
+            <button type="submit"
+              class="group mt-5 inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-cyan-glow px-7 py-3.5 font-medium text-void hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] transition-all duration-300">
+              Send Message
+              <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+                stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </button>
+            <p id="form-status" class="mt-4 hidden font-mono text-xs text-matrix"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-line bg-void">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-10">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-2.5">
+          <span
+            class="flex h-8 w-8 items-center justify-center rounded-lg border border-cyan-glow/40 bg-cyan-glow/10 font-mono text-sm text-cyan-glow">∞</span>
+          <div>
+            <p class="text-sm font-semibold text-white">pnnnhan99 <span class="text-ghost font-normal">·
+                lonoup.com</span></p>
+            <p class="font-mono text-[11px] text-ghost">Loop × Node — endless innovation.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 font-mono text-xs text-ghost">
+          <a href="#about" class="hover:text-cyan-glow transition">About</a>
+          <a href="#stack" class="hover:text-cyan-glow transition">Stack</a>
+          <a href="#projects" class="hover:text-cyan-glow transition">Projects</a>
+          <a href="https://github.com/pnnnhan99" target="_blank" rel="noopener noreferrer"
+            class="hover:text-cyan-glow transition">GitHub</a>
+        </div>
+
+        <p class="font-mono text-[11px] text-slate-600">© <span id="year"></span> pnnnhan99 — built for the open web.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
