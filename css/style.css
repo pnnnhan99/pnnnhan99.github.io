@@ -1,6 +1,6 @@
 :root {
-  --cyan: #22d3ee;
-  --matrix: #4ade80;
+  --purple: #a855f7;
+  --matrix: #ec4899;
 }
 
 html {
@@ -34,55 +34,55 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #22d3ee55;
+  background: #a855f755;
 }
 
 ::-moz-selection {
-  background: rgba(34, 211, 238, 0.3);
+  background: rgba(168, 85, 247, 0.3);
 }
 
 .nav-link.active {
   color: #fff;
-  background: rgba(34, 211, 238, 0.07);
-  box-shadow: inset 0 -2px 0 0 var(--cyan);
+  background: rgba(168, 85, 247, 0.07);
+  box-shadow: inset 0 -2px 0 0 var(--purple);
 }
 
 .tag {
   display: inline-flex;
   align-items: center;
   border-radius: 9999px;
-  border: 1px solid rgba(34, 211, 238, 0.25);
-  background: rgba(34, 211, 238, 0.07);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  background: rgba(168, 85, 247, 0.07);
   padding: 0.2rem 0.65rem;
   font-family: "JetBrains Mono", monospace;
   font-size: 0.68rem;
-  color: #a5f3fc;
+  color: #e9d5ff;
   transition: all 0.25s ease;
 }
 
 .tag:hover {
-  border-color: rgba(34, 211, 238, 0.6);
+  border-color: rgba(168, 85, 247, 0.6);
   transform: translateY(-1px);
 }
 
 .tag-green {
-  border-color: rgba(74, 222, 128, 0.28);
-  background: rgba(74, 222, 128, 0.07);
-  color: #bbf7d0;
+  border-color: rgba(236, 72, 153, 0.28);
+  background: rgba(236, 72, 153, 0.07);
+  color: #fbcfe8;
 }
 
 .tag-green:hover {
-  border-color: rgba(74, 222, 128, 0.65);
+  border-color: rgba(236, 72, 153, 0.65);
 }
 
 .tag-blue {
-  border-color: rgba(56, 189, 248, 0.28);
-  background: rgba(56, 189, 248, 0.07);
-  color: #bae6fd;
+  border-color: rgba(192, 132, 252, 0.28);
+  background: rgba(192, 132, 252, 0.07);
+  color: #e9d5ff;
 }
 
 .tag-blue:hover {
-  border-color: rgba(56, 189, 248, 0.65);
+  border-color: rgba(192, 132, 252, 0.65);
 }
 
 #navbar.scrolled {
@@ -155,7 +155,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%), rgba(34, 211, 238, 0.06), transparent 45%);
+  background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%), rgba(168, 85, 247, 0.06), transparent 45%);
   opacity: 0;
   transition: opacity 0.35s ease;
   pointer-events: none;
@@ -172,8 +172,11 @@ body {
 
 input:focus,
 textarea:focus {
-  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.12);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.12);
 }
+
+/* Sticky stacking sections handled by Tailwind classes */
+
 
 @media (prefers-reduced-motion: reduce) {
   .reveal {
@@ -192,4 +195,19 @@ textarea:focus {
   * {
     scroll-behavior: auto !important;
   }
+}
+
+@keyframes bounce-x {
+  0%, 100% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateX(25%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce-x {
+  animation: bounce-x 1s infinite;
 }

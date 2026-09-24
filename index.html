@@ -27,8 +27,8 @@
             void: '#05070a',
             panel: '#0a0e14',
             line: '#161d29',
-            cyan: { glow: '#22d3ee', deep: '#0ea5e9' },
-            matrix: '#4ade80',
+            purple: { glow: '#a855f7', deep: '#7c3aed' },
+            matrix: '#ec4899',
             ghost: '#8b9bb4'
           },
           fontFamily: {
@@ -43,10 +43,10 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="bg-void text-slate-200 font-display antialiased selection:bg-cyan-glow/30 selection:text-white">
+<body class="bg-void text-slate-200 font-display antialiased selection:bg-purple-glow/30 selection:text-white">
 
   <div id="progress-bar"
-    class="fixed top-0 left-0 h-[2px] w-0 bg-gradient-to-r from-cyan-glow via-cyan-deep to-matrix z-[60]"></div>
+    class="fixed top-0 left-0 h-[2px] w-0 bg-gradient-to-r from-purple-glow via-purple-deep to-pink-500 z-[60]"></div>
 
   <div class="noise-overlay" aria-hidden="true"></div>
 
@@ -55,9 +55,9 @@
       <div class="flex items-center justify-between h-16 md:h-20">
         <a href="#hero" class="group flex items-center gap-2.5">
           <span
-            class="relative flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-glow/40 bg-cyan-glow/10 font-mono text-sm font-bold text-cyan-glow transition group-hover:shadow-[0_0_20px_rgba(34,211,238,0.45)]">∞</span>
+            class="relative flex h-9 w-9 items-center justify-center rounded-lg border border-purple-glow/40 bg-purple-glow/10 font-mono text-sm font-bold text-purple-glow transition group-hover:shadow-[0_0_20px_rgba(34,211,238,0.45)]">∞</span>
           <span class="font-mono text-sm font-semibold tracking-tight text-white">lonoup<span
-              class="text-cyan-glow">.</span>com</span>
+              class="text-purple-glow">.</span>com</span>
         </a>
 
         <div class="hidden md:flex items-center gap-1">
@@ -70,7 +70,7 @@
           <a href="#contact"
             class="nav-link px-4 py-2 text-sm text-ghost hover:text-white transition rounded-md">Contact</a>
           <a href="https://github.com/pnnnhan99" target="_blank" rel="noopener noreferrer"
-            class="ml-3 inline-flex items-center gap-2 rounded-lg border border-line bg-panel px-4 py-2 text-sm text-white hover:border-cyan-glow/50 hover:text-cyan-glow transition">
+            class="ml-3 inline-flex items-center gap-2 rounded-lg border border-line bg-panel px-4 py-2 text-sm text-white hover:border-purple-glow/50 hover:text-purple-glow transition">
             <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path
                 d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z" />
@@ -110,19 +110,20 @@
   </nav>
 
   <main>
-    <section id="hero" class="relative min-h-screen flex items-center overflow-hidden">
+    <section id="hero" class="sticky top-0 z-10 h-screen flex items-center overflow-hidden bg-void">
+
       <canvas id="node-canvas" class="absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
       <div class="absolute inset-0 bg-gradient-to-b from-void/40 via-void/70 to-void pointer-events-none"
         aria-hidden="true"></div>
       <div
-        class="absolute top-1/4 left-1/2 -translate-x-1/2 h-[500px] w-[900px] rounded-full bg-cyan-glow/10 blur-[140px] pointer-events-none"
+        class="absolute top-1/4 left-1/2 -translate-x-1/2 h-[500px] w-[900px] rounded-full bg-purple-glow/10 blur-[140px] pointer-events-none"
         aria-hidden="true"></div>
 
       <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 w-full pt-28 pb-20">
         <div class="grid lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-7">
             <div
-              class="hero-badge inline-flex items-center gap-2 rounded-full border border-cyan-glow/30 bg-cyan-glow/5 px-4 py-1.5 font-mono text-xs text-cyan-glow mb-7">
+              class="hero-badge inline-flex items-center gap-2 rounded-full border border-purple-glow/30 bg-purple-glow/5 px-4 py-1.5 font-mono text-xs text-purple-glow mb-7">
               <span class="relative flex h-2 w-2">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-matrix opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-2 w-2 bg-matrix"></span>
@@ -133,7 +134,7 @@
             <p class="hero-line font-mono text-sm text-matrix mb-4">$ whoami</p>
 
             <h1 class="hero-line text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.05]">
-              pnnnhan<span class="text-cyan-glow">99</span><span class="text-cyan-glow animate-blink">_</span>
+              pnnnhan<span class="text-purple-glow">99</span><span class="text-purple-glow animate-blink">_</span>
             </h1>
 
             <p class="hero-line mt-6 text-xl sm:text-2xl lg:text-3xl font-light text-slate-300 leading-snug max-w-2xl">
@@ -142,7 +143,7 @@
               <span class="text-white font-medium">Node.js</span>
               &amp;
               <span
-                class="bg-gradient-to-r from-cyan-glow to-matrix bg-clip-text text-transparent font-semibold">AI</span>.
+                class="bg-gradient-to-r from-purple-glow to-pink-500 bg-clip-text text-transparent font-semibold">AI</span>.
             </p>
 
             <p class="hero-line mt-6 text-base sm:text-lg text-ghost max-w-xl leading-relaxed">
@@ -152,15 +153,18 @@
 
             <div class="hero-line mt-9 flex flex-wrap gap-4">
               <a href="#projects"
-                class="group relative inline-flex items-center gap-2 rounded-xl bg-cyan-glow px-7 py-3.5 font-medium text-void hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] transition-all duration-300">
-                View My Work
-                <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
-                  stroke-width="2.2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
+                class="magnetic-btn group relative inline-flex items-center gap-2 rounded-xl bg-purple-glow px-7 py-3.5 font-medium text-void hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] transition-shadow duration-300">
+                
+                <span class="magnetic-content flex items-center gap-2 pointer-events-none">
+                  View My Work
+                  <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+                    stroke-width="2.2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </span>
               </a>
               <a href="#contact"
-                class="inline-flex items-center gap-2 rounded-xl border border-line bg-panel/60 px-7 py-3.5 font-medium text-white hover:border-cyan-glow/50 hover:bg-panel transition">
+                class="inline-flex items-center gap-2 rounded-xl border border-line bg-panel/60 px-7 py-3.5 font-medium text-white hover:border-purple-glow/50 hover:bg-panel transition">
                 Connect With Me
               </a>
             </div>
@@ -183,48 +187,63 @@
 
           <div class="lg:col-span-5 hero-visual">
             <div class="relative mx-auto max-w-md">
-              <div class="absolute -inset-6 rounded-3xl bg-gradient-to-tr from-cyan-glow/20 via-transparent to-matrix/20 blur-2xl" aria-hidden="true"></div>
+              <div
+                class="absolute -inset-6 rounded-3xl bg-gradient-to-tr from-purple-glow/20 via-transparent to-pink-500/20 blur-2xl"
+                aria-hidden="true"></div>
 
               <div class="relative rounded-2xl border border-line bg-panel/80 backdrop-blur-xl shadow-2xl p-6 md:p-8">
-                
+
                 <div class="flex items-center justify-between mb-8">
                   <div class="flex items-center gap-2.5">
                     <div class="relative flex h-2.5 w-2.5">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-matrix opacity-75"></span>
+                      <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-matrix opacity-75"></span>
                       <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-matrix"></span>
                     </div>
                     <span class="font-mono text-xs uppercase tracking-wider text-slate-300">System Active</span>
                   </div>
-                  <span class="rounded-full bg-cyan-glow/10 border border-cyan-glow/20 px-3 py-1 font-mono text-[10px] text-cyan-glow uppercase tracking-wide">
+                  <span
+                    class="rounded-full bg-purple-glow/10 border border-purple-glow/20 px-3 py-1 font-mono text-[10px] text-purple-glow uppercase tracking-wide">
                     Lonoup Ecosystem
                   </span>
                 </div>
 
                 <div class="relative py-4 flex justify-between items-center">
-                  <div class="absolute left-0 right-0 top-1/2 h-[2px] -translate-y-1/2 bg-gradient-to-r from-transparent via-cyan-glow/40 to-transparent"></div>
+                  <div
+                    class="absolute left-0 right-0 top-1/2 h-[2px] -translate-y-1/2 bg-gradient-to-r from-transparent via-purple-glow/40 to-transparent">
+                  </div>
 
                   <div class="relative z-10 flex flex-col items-center gap-3">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-full bg-void border border-line text-slate-300 shadow-lg group hover:border-cyan-glow/50 transition duration-300">
+                    <div
+                      class="flex h-12 w-12 items-center justify-center rounded-full bg-void border border-line text-slate-300 shadow-lg group hover:border-purple-glow/50 transition duration-300">
                       <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125">
+                        </path>
                       </svg>
                     </div>
                     <span class="text-[10px] font-medium text-ghost uppercase tracking-wider">Foundation</span>
                   </div>
 
                   <div class="relative z-10 flex flex-col items-center gap-3">
-                    <div class="flex h-16 w-16 items-center justify-center rounded-full bg-panel border border-cyan-glow/50 text-cyan-glow shadow-[0_0_20px_rgba(34,211,238,0.2)]">
+                    <div
+                      class="flex h-16 w-16 items-center justify-center rounded-full bg-panel border border-purple-glow/50 text-purple-glow shadow-[0_0_20px_rgba(34,211,238,0.2)]">
                       <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z">
+                        </path>
                       </svg>
                     </div>
-                    <span class="text-[10px] font-bold text-cyan-glow uppercase tracking-wider">AI Logic</span>
+                    <span class="text-[10px] font-bold text-purple-glow uppercase tracking-wider">AI Logic</span>
                   </div>
 
                   <div class="relative z-10 flex flex-col items-center gap-3">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-full bg-void border border-line text-matrix shadow-lg group hover:border-matrix/50 transition duration-300">
+                    <div
+                      class="flex h-12 w-12 items-center justify-center rounded-full bg-void border border-line text-matrix shadow-lg group hover:border-matrix/50 transition duration-300">
                       <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z">
+                        </path>
                       </svg>
                     </div>
                     <span class="text-[10px] font-medium text-ghost uppercase tracking-wider">People</span>
@@ -233,13 +252,14 @@
 
                 <div class="mt-8 rounded-xl bg-void/50 border border-line p-4 text-center">
                   <p class="text-sm text-slate-300 leading-relaxed">
-                    Transforming complex engineering and AI into <span class="text-white font-medium">simple, seamless experiences</span> for everyday users.
+                    Transforming complex engineering and AI into <span class="text-white font-medium">simple, seamless
+                      experiences</span> for everyday users.
                   </p>
                 </div>
               </div>
 
-              <svg class="absolute -bottom-8 -left-6 w-28 h-28 text-cyan-glow/70 float-slow pointer-events-none" viewBox="0 0 200 100"
-                fill="none" aria-hidden="true">
+              <svg class="absolute -bottom-8 -left-6 w-28 h-28 text-purple-glow/70 float-slow pointer-events-none"
+                viewBox="0 0 200 100" fill="none" aria-hidden="true">
                 <path
                   d="M50 50c0-22 18-40 40-40s40 18 40 40-18 40-40 40-40-18-40-40Zm60 0c0 22 18 40 40 40s40-18 40-40-18-40-40-40-40 18-40 40Z"
                   stroke="currentColor" stroke-width="6" stroke-linecap="round" class="loop-draw" />
@@ -250,7 +270,7 @@
       </div>
 
       <a href="#about"
-        class="absolute bottom-7 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-ghost hover:text-cyan-glow transition"
+        class="absolute bottom-7 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-ghost hover:text-purple-glow transition"
         aria-label="Scroll to about">
         <span class="font-mono text-[10px] uppercase tracking-[0.25em]">scroll</span>
         <span class="h-9 w-5 rounded-full border border-current flex justify-start p-1">
@@ -259,51 +279,66 @@
       </a>
     </section>
 
-    <section id="about" class="relative py-24 md:py-32 border-t border-line">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <section id="about"
+      class="sticky top-[min(0px,calc(100vh-100%))] z-20 min-h-screen border-t border-line flex items-center bg-panel rounded-t-[40px] shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 w-full">
         <div class="reveal">
-          <p class="font-mono text-xs uppercase tracking-[0.3em] text-cyan-glow mb-4">01 — About</p>
+          <p class="font-mono text-xs uppercase tracking-[0.3em] text-purple-glow mb-4">01 — About</p>
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
             The journey &amp; the <span
-              class="bg-gradient-to-r from-cyan-glow to-matrix bg-clip-text text-transparent">Lonoup</span> philosophy
+              class="bg-gradient-to-r from-purple-glow to-pink-500 bg-clip-text text-transparent">Lonoup</span>
+            philosophy
           </h2>
         </div>
 
         <div class="mt-14 grid lg:grid-cols-12 gap-10">
           <div class="lg:col-span-7 space-y-6 reveal">
             <p class="text-lg text-slate-300 leading-relaxed">
-              I'm <strong class="text-white">pnnnhan99</strong> — a full-stack developer with a deep focus on backend architectures. My foundation is built on <span class="text-cyan-glow">Laravel</span> and <span class="text-cyan-glow">Node.js</span>, empowering me to build scalable platforms and deliver high-quality web development services.
+              I'm <strong class="text-white">pnnnhan99</strong> — a full-stack developer with a deep focus on backend
+              architectures. My foundation is built on <span class="text-purple-glow">Laravel</span> and <span
+                class="text-purple-glow">Node.js</span>, empowering me to build scalable platforms and deliver
+              high-quality web development services.
             </p>
             <p class="text-lg text-slate-300 leading-relaxed">
-              Currently, I am architecting <strong class="text-white">lonoup.com</strong>. It is designed to be more than just a portfolio; it is a central hub for professional web solutions and an expanding ecosystem of digital tools (like <em>social.lonoup</em> and <em>studio.lonoup</em>).
+              Currently, I am architecting <strong class="text-white">lonoup.com</strong>. It is designed to be more
+              than just a portfolio; it is a central hub for professional web solutions and an expanding ecosystem of
+              digital tools (like <em>social.lonoup</em> and <em>studio.lonoup</em>).
             </p>
             <p class="text-lg text-slate-300 leading-relaxed">
-              Alongside providing premium client services, I am passionate about integrating <span class="text-matrix">AI & Python</span> into everyday tools, sharing knowledge through technical blogs, and maintaining open-source repositories for the community.
+              Alongside providing premium client services, I am passionate about integrating <span
+                class="text-matrix">AI & Python</span> into everyday tools, sharing knowledge through technical blogs,
+              and maintaining open-source repositories for the community.
             </p>
 
             <div class="grid sm:grid-cols-3 gap-4 pt-4">
-              <div class="rounded-xl border border-line bg-panel p-5 hover:border-cyan-glow/40 transition">
-                <p class="font-mono text-2xl text-cyan-glow">01</p>
-                <p class="mt-2 text-sm text-slate-300"><strong class="text-white font-medium">Web Services:</strong> Delivering robust, custom web development and business solutions.</p>
+              <div class="rounded-xl border border-line bg-panel p-5 hover:border-purple-glow/40 transition">
+                <p class="font-mono text-2xl text-purple-glow">01</p>
+                <p class="mt-2 text-sm text-slate-300"><strong class="text-white font-medium">Web Services:</strong>
+                  Delivering robust, custom web development and business solutions.</p>
               </div>
-              <div class="rounded-xl border border-line bg-panel p-5 hover:border-cyan-glow/40 transition">
-                <p class="font-mono text-2xl text-cyan-glow">02</p>
-                <p class="mt-2 text-sm text-slate-300"><strong class="text-white font-medium">Ecosystem:</strong> Building a suite of connected tools (Social, Studio, Apps).</p>
+              <div class="rounded-xl border border-line bg-panel p-5 hover:border-purple-glow/40 transition">
+                <p class="font-mono text-2xl text-purple-glow">02</p>
+                <p class="mt-2 text-sm text-slate-300"><strong class="text-white font-medium">Ecosystem:</strong>
+                  Building a suite of connected tools (Social, Studio, Apps).</p>
               </div>
-              <div class="rounded-xl border border-line bg-panel p-5 hover:border-cyan-glow/40 transition">
-                <p class="font-mono text-2xl text-cyan-glow">03</p>
-                <p class="mt-2 text-sm text-slate-300"><strong class="text-white font-medium">Community:</strong> Sharing insights via blogs and contributing to Open Source.</p>
+              <div class="rounded-xl border border-line bg-panel p-5 hover:border-purple-glow/40 transition">
+                <p class="font-mono text-2xl text-purple-glow">03</p>
+                <p class="mt-2 text-sm text-slate-300"><strong class="text-white font-medium">Community:</strong>
+                  Sharing insights via blogs and contributing to Open Source.</p>
               </div>
             </div>
           </div>
 
           <div class="lg:col-span-5 reveal">
-            <div class="relative rounded-2xl border border-line bg-gradient-to-b from-panel to-void p-8 h-full overflow-hidden">
-              <div class="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-cyan-glow/10 blur-3xl" aria-hidden="true"></div>
+            <div
+              class="relative rounded-2xl border border-line bg-gradient-to-b from-panel to-void p-8 h-full overflow-hidden">
+              <div class="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-purple-glow/10 blur-3xl"
+                aria-hidden="true"></div>
 
               <div class="relative">
                 <div class="flex items-center gap-3 mb-7">
-                  <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-glow/10 border border-cyan-glow/30 text-cyan-glow font-mono text-lg">∞</span>
+                  <span
+                    class="flex h-11 w-11 items-center justify-center rounded-xl bg-purple-glow/10 border border-purple-glow/30 text-purple-glow font-mono text-lg">∞</span>
                   <div>
                     <p class="text-white font-semibold tracking-tight">The Lonoup Hub</p>
                     <p class="font-mono text-xs text-ghost">Services × Ecosystem × Open Source</p>
@@ -312,24 +347,28 @@
 
                 <div class="space-y-5">
                   <div class="flex gap-4">
-                    <span class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-cyan-glow shadow-[0_0_10px_#22d3ee]"></span>
+                    <span
+                      class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-purple-glow shadow-[0_0_10px_#22d3ee]"></span>
                     <div>
                       <p class="text-white font-medium">Professional Services</p>
-                      <p class="text-sm text-ghost leading-relaxed mt-1">Providing reliable web development, system architecture, and tech consultation to turn client ideas into digital realities.</p>
+                      <p class="text-sm text-ghost leading-relaxed mt-1">Providing reliable web development, system
+                        architecture, and tech consultation to turn client ideas into digital realities.</p>
                     </div>
                   </div>
                   <div class="flex gap-4">
                     <span class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-matrix shadow-[0_0_10px_#4ade80]"></span>
                     <div>
                       <p class="text-white font-medium">Digital Ecosystem</p>
-                      <p class="text-sm text-ghost leading-relaxed mt-1">A unified network of sub-platforms (social, studio, media) working seamlessly together to serve various user needs.</p>
+                      <p class="text-sm text-ghost leading-relaxed mt-1">A unified network of sub-platforms (social,
+                        studio, media) working seamlessly together to serve various user needs.</p>
                     </div>
                   </div>
                   <div class="flex gap-4">
                     <span class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-white shadow-[0_0_10px_#fff]"></span>
                     <div>
                       <p class="text-white font-medium">Knowledge Base</p>
-                      <p class="text-sm text-ghost leading-relaxed mt-1">A dedicated space for tech blogs, engineering insights, and open-source packages to empower the next generation of developers.</p>
+                      <p class="text-sm text-ghost leading-relaxed mt-1">A dedicated space for tech blogs, engineering
+                        insights, and open-source packages to empower the next generation of developers.</p>
                     </div>
                   </div>
                 </div>
@@ -340,10 +379,11 @@
       </div>
     </section>
 
-    <section id="stack" class="relative py-24 md:py-32 border-t border-line bg-panel/30">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <section id="stack"
+      class="sticky top-[min(0px,calc(100vh-100%))] z-30 min-h-screen border-t border-line bg-void rounded-t-[40px] shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 py-24 md:py-32">
         <div class="reveal max-w-3xl">
-          <p class="font-mono text-xs uppercase tracking-[0.3em] text-cyan-glow mb-4">02 — Stack</p>
+          <p class="font-mono text-xs uppercase tracking-[0.3em] text-purple-glow mb-4">02 — Stack</p>
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">Tools I build with</h2>
           <p class="mt-5 text-lg text-ghost leading-relaxed">
             A battle-tested backend core, actively being extended with the languages and tooling of the AI era.
@@ -352,10 +392,10 @@
 
         <div class="mt-14 grid md:grid-cols-3 gap-6">
           <article
-            class="skill-card group rounded-2xl border border-line bg-void/80 p-7 hover:border-cyan-glow/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
+            class="skill-card group rounded-2xl border border-line bg-void/80 p-7 hover:border-purple-glow/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
             <div class="flex items-center justify-between">
               <span
-                class="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-glow/10 border border-cyan-glow/30 text-cyan-glow">
+                class="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-glow/10 border border-purple-glow/30 text-purple-glow">
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
@@ -375,7 +415,8 @@
               <span class="tag">Redis</span>
             </div>
             <div class="mt-6 h-1.5 rounded-full bg-line overflow-hidden">
-              <div class="skill-bar h-full rounded-full bg-gradient-to-r from-cyan-deep to-cyan-glow" data-level="92%">
+              <div class="skill-bar h-full rounded-full bg-gradient-to-r from-purple-deep to-purple-glow"
+                data-level="92%">
               </div>
             </div>
           </article>
@@ -404,16 +445,16 @@
               <span class="tag tag-green">Data Pipelines</span>
             </div>
             <div class="mt-6 h-1.5 rounded-full bg-line overflow-hidden">
-              <div class="skill-bar h-full rounded-full bg-gradient-to-r from-emerald-600 to-matrix" data-level="78%">
+              <div class="skill-bar h-full rounded-full bg-gradient-to-r from-pink-600 to-pink-500" data-level="78%">
               </div>
             </div>
           </article>
 
           <article
-            class="skill-card group rounded-2xl border border-line bg-void/80 p-7 hover:border-cyan-deep/60 transition-all duration-300 hover:-translate-y-1.5 reveal">
+            class="skill-card group rounded-2xl border border-line bg-void/80 p-7 hover:border-purple-deep/60 transition-all duration-300 hover:-translate-y-1.5 reveal">
             <div class="flex items-center justify-between">
               <span
-                class="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400">
+                class="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/10 border border-violet-500/30 text-violet-400">
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
                     d="M14.7 6.3a5 5 0 1 0-7.4 7.4L3 18l3 3 4.3-4.3a5 5 0 0 0 7.4-7.4l-3 3-2.3-2.3 3-3Z" />
@@ -433,7 +474,8 @@
               <span class="tag tag-blue">OSS Workflow</span>
             </div>
             <div class="mt-6 h-1.5 rounded-full bg-line overflow-hidden">
-              <div class="skill-bar h-full rounded-full bg-gradient-to-r from-sky-700 to-sky-400" data-level="88%">
+              <div class="skill-bar h-full rounded-full bg-gradient-to-r from-violet-700 to-violet-400"
+                data-level="88%">
               </div>
             </div>
           </article>
@@ -441,238 +483,318 @@
 
         <div class="mt-12 overflow-hidden rounded-2xl border border-line bg-void/60 py-4 reveal">
           <div class="marquee font-mono text-sm text-ghost whitespace-nowrap">
-            <span class="mx-6 text-cyan-glow">◆</span><span>Laravel</span>
-            <span class="mx-6 text-cyan-glow">◆</span><span>Node.js</span>
-            <span class="mx-6 text-cyan-glow">◆</span><span>Python</span>
-            <span class="mx-6 text-cyan-glow">◆</span><span>AI Integration</span>
-            <span class="mx-6 text-cyan-glow">◆</span><span>Open Source</span>
-            <span class="mx-6 text-cyan-glow">◆</span><span>Git</span>
-            <span class="mx-6 text-cyan-glow">◆</span><span>REST APIs</span>
-            <span class="mx-6 text-cyan-glow">◆</span><span>Multi-user Systems</span>
-            <span class="mx-6 text-cyan-glow">◆</span><span>Laravel</span>
-            <span class="mx-6 text-cyan-glow">◆</span><span>Node.js</span>
-            <span class="mx-6 text-cyan-glow">◆</span><span>Python</span>
-            <span class="mx-6 text-cyan-glow">◆</span><span>AI Integration</span>
-            <span class="mx-6 text-cyan-glow">◆</span><span>Open Source</span>
-            <span class="mx-6 text-cyan-glow">◆</span><span>Git</span>
-            <span class="mx-6 text-cyan-glow">◆</span><span>REST APIs</span>
-            <span class="mx-6 text-cyan-glow">◆</span><span>Multi-user Systems</span>
+            <span class="mx-6 text-purple-glow">◆</span><span>Laravel</span>
+            <span class="mx-6 text-purple-glow">◆</span><span>Node.js</span>
+            <span class="mx-6 text-purple-glow">◆</span><span>Python</span>
+            <span class="mx-6 text-purple-glow">◆</span><span>AI Integration</span>
+            <span class="mx-6 text-purple-glow">◆</span><span>Open Source</span>
+            <span class="mx-6 text-purple-glow">◆</span><span>Git</span>
+            <span class="mx-6 text-purple-glow">◆</span><span>REST APIs</span>
+            <span class="mx-6 text-purple-glow">◆</span><span>Multi-user Systems</span>
+            <span class="mx-6 text-purple-glow">◆</span><span>Laravel</span>
+            <span class="mx-6 text-purple-glow">◆</span><span>Node.js</span>
+            <span class="mx-6 text-purple-glow">◆</span><span>Python</span>
+            <span class="mx-6 text-purple-glow">◆</span><span>AI Integration</span>
+            <span class="mx-6 text-purple-glow">◆</span><span>Open Source</span>
+            <span class="mx-6 text-purple-glow">◆</span><span>Git</span>
+            <span class="mx-6 text-purple-glow">◆</span><span>REST APIs</span>
+            <span class="mx-6 text-purple-glow">◆</span><span>Multi-user Systems</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="relative py-24 md:py-32 border-t border-line">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 reveal">
-          <div class="max-w-2xl">
-            <p class="font-mono text-xs uppercase tracking-[0.3em] text-cyan-glow mb-4">03 — Projects</p>
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">Open source &amp; Ecosystem
-            </h2>
-            <p class="mt-5 text-lg text-ghost leading-relaxed">
-              A showcase of my active developments: from the <span class="text-white">Lonoup open-source packages</span> and AI tooling to real-world platforms and automation systems.
-            </p>
+    <!-- Projects scroll wrapper — gives GSAP room to drive horizontal pan -->
+    <div id="projects-wrapper" class="relative z-40" style="height: calc(100vh + 360px);">
+      <section id="projects"
+        class="sticky top-0 h-screen border-t border-line bg-panel rounded-t-[40px] shadow-[0_-10px_40px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 pt-24 md:pt-32 pb-6 flex-shrink-0">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 reveal">
+            <div class="max-w-2xl">
+              <p class="font-mono text-xs uppercase tracking-[0.3em] text-purple-glow mb-4">03 — Projects</p>
+              <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">Open source &amp;
+                Ecosystem
+              </h2>
+              <p class="mt-5 text-lg text-ghost leading-relaxed">
+                A showcase of my active developments: from the <span class="text-white">Lonoup open-source
+                  packages</span> and AI tooling to real-world platforms and automation systems.
+              </p>
+            </div>
+            <a href="https://github.com/pnnnhan99" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 self-start rounded-xl border border-line bg-panel px-5 py-3 text-sm text-white hover:border-purple-glow/50 hover:text-purple-glow transition">
+              View full profile
+              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z" />
+              </svg>
+            </a>
           </div>
-          <a href="https://github.com/pnnnhan99" target="_blank" rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 self-start rounded-xl border border-line bg-panel px-5 py-3 text-sm text-white hover:border-cyan-glow/50 hover:text-cyan-glow transition">
-            View full profile
-            <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z" />
+
+          <!-- Scroll hint -->
+          <div class="mt-6 flex items-center gap-2 font-mono text-[11px] text-ghost/60">
+            <svg class="h-3.5 w-3.5 animate-bounce-x" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
             </svg>
-          </a>
+            scroll to explore
+          </div>
         </div>
 
-        <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-          <article
-            class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-cyan-glow/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
-            <div class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-cyan-glow to-cyan-deep group-hover:w-full transition-all duration-500"></div>
-            <div class="p-6">
-              <div class="flex items-start justify-between">
-                <span class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-cyan-glow text-sm">repo</span>
-                <span class="inline-flex items-center gap-1.5 rounded-full border border-matrix/30 bg-matrix/10 px-2.5 py-1 font-mono text-[10px] text-matrix">
-                  <span class="h-1.5 w-1.5 rounded-full bg-matrix"></span> public
-                </span>
-              </div>
-              <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-cyan-glow transition">lonoup-location</h3>
-              <p class="mt-2 text-sm text-ghost leading-relaxed">
-                An open-source PHP package for robust geographical and location data handling. Part of the core Lonoup ecosystem meant to simplify backend spatial queries.
-              </p>
-              <div class="mt-5 flex flex-wrap gap-2">
-                <span class="tag">PHP</span>
-                <span class="tag">Open Source</span>
-                <span class="tag">Backend</span>
-              </div>
-              <div class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
-                <span class="inline-flex items-center gap-1.5"><span class="h-2.5 w-2.5 rounded-full bg-[#4F5D95]"></span> PHP</span>
-                <span class="inline-flex items-center gap-3">
-                  <span>★ 3</span>
-                  <span>⑂ 1</span>
-                </span>
-              </div>
+        <!-- Horizontal track -->
+        <div class="w-full max-w-6xl mx-auto flex-1 flex flex-col min-h-0">
+          <div class="flex-1 overflow-hidden relative"
+            style="-webkit-mask-image: linear-gradient(to right, transparent, black 2rem, black calc(100% - 2rem), transparent); mask-image: linear-gradient(to right, transparent, black 2rem, black calc(100% - 2rem), transparent);">
+            <div id="projects-track"
+              class="absolute top-0 left-0 flex items-stretch gap-6 px-5 sm:px-8 pb-10 will-change-transform">
+
+              <article
+                class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
+                <div
+                  class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-purple-glow to-purple-deep group-hover:w-full transition-all duration-500">
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                  <div class="flex items-start justify-between">
+                    <span
+                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-purple-glow text-sm">repo</span>
+                    <span
+                      class="inline-flex items-center gap-1.5 rounded-full border border-matrix/30 bg-matrix/10 px-2.5 py-1 font-mono text-[10px] text-matrix">
+                      <span class="h-1.5 w-1.5 rounded-full bg-matrix"></span> public
+                    </span>
+                  </div>
+                  <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-purple-glow transition">
+                    lonoup-location</h3>
+                  <p class="mt-2 text-sm text-ghost leading-relaxed flex-1">
+                    An open-source PHP package for robust geographical and location data handling. Part of the core
+                    Lonoup ecosystem meant to simplify backend spatial queries.
+                  </p>
+                  <div class="mt-5 flex flex-wrap gap-2">
+                    <span class="tag">PHP</span>
+                    <span class="tag">Open Source</span>
+                    <span class="tag">Backend</span>
+                  </div>
+                  <div
+                    class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
+                    <span class="inline-flex items-center gap-1.5"><span
+                        class="h-2.5 w-2.5 rounded-full bg-[#4F5D95]"></span> PHP</span>
+                    <span class="inline-flex items-center gap-3">
+                      <span>★ 3</span>
+                      <span>⑂ 1</span>
+                    </span>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
+                <div
+                  class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-purple-glow to-purple-deep group-hover:w-full transition-all duration-500">
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                  <div class="flex items-start justify-between">
+                    <span
+                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-purple-glow text-sm">fork</span>
+                    <span
+                      class="inline-flex items-center gap-1.5 rounded-full border border-matrix/30 bg-matrix/10 px-2.5 py-1 font-mono text-[10px] text-matrix">
+                      <span class="h-1.5 w-1.5 rounded-full bg-matrix"></span> active
+                    </span>
+                  </div>
+                  <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-purple-glow transition">
+                    cockpit-tools</h3>
+                  <p class="mt-2 text-sm text-ghost leading-relaxed flex-1">
+                    A universal AI IDE account management tool supporting Cursor, Windsurf, Copilot, and Gemini-cli.
+                    Built with Rust for quota monitoring and multi-instance handling.
+                  </p>
+                  <div class="mt-5 flex flex-wrap gap-2">
+                    <span class="tag tag-blue">Rust</span>
+                    <span class="tag tag-green">AI Tools</span>
+                    <span class="tag">CLI</span>
+                  </div>
+                  <div
+                    class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
+                    <span class="inline-flex items-center gap-1.5"><span
+                        class="h-2.5 w-2.5 rounded-full bg-[#dea584]"></span> Rust</span>
+                    <span class="inline-flex items-center gap-3">
+                      <span>★ 12</span>
+                      <span>⑂ 4</span>
+                    </span>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
+                <div
+                  class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-purple-glow to-purple-deep group-hover:w-full transition-all duration-500">
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                  <div class="flex items-start justify-between">
+                    <span
+                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-purple-glow text-sm">core</span>
+                    <span
+                      class="inline-flex items-center gap-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 px-2.5 py-1 font-mono text-[10px] text-purple-400">
+                      <span class="h-1.5 w-1.5 rounded-full bg-purple-400"></span> private
+                    </span>
+                  </div>
+                  <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-purple-glow transition">
+                    lonoup-platform</h3>
+                  <p class="mt-2 text-sm text-ghost leading-relaxed flex-1">
+                    The internal foundation driving the LoopUp ecosystem and newbie marketplace. A modern architecture
+                    built with Next.js and TypeScript for scalable delivery.
+                  </p>
+                  <div class="mt-5 flex flex-wrap gap-2">
+                    <span class="tag tag-blue">TypeScript</span>
+                    <span class="tag">Next.js</span>
+                    <span class="tag">Platform</span>
+                  </div>
+                  <div
+                    class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
+                    <span class="inline-flex items-center gap-1.5"><span
+                        class="h-2.5 w-2.5 rounded-full bg-[#3178c6]"></span> TypeScript</span>
+                    <span class="inline-flex items-center gap-3">
+                      <span>Private</span>
+                    </span>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
+                <div
+                  class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-purple-glow to-purple-deep group-hover:w-full transition-all duration-500">
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                  <div class="flex items-start justify-between">
+                    <span
+                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-purple-glow text-sm">repo</span>
+                    <span
+                      class="inline-flex items-center gap-1.5 rounded-full border border-matrix/30 bg-matrix/10 px-2.5 py-1 font-mono text-[10px] text-matrix">
+                      <span class="h-1.5 w-1.5 rounded-full bg-matrix"></span> public
+                    </span>
+                  </div>
+                  <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-purple-glow transition">lonoup-tts
+                  </h3>
+                  <p class="mt-2 text-sm text-ghost leading-relaxed flex-1">
+                    A C++ based Text-to-Speech integration module. Exploring low-level system performance for AI voice
+                    generation and real-time audio processing.
+                  </p>
+                  <div class="mt-5 flex flex-wrap gap-2">
+                    <span class="tag tag-blue">C++</span>
+                    <span class="tag tag-green">AI</span>
+                    <span class="tag">Audio</span>
+                  </div>
+                  <div
+                    class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
+                    <span class="inline-flex items-center gap-1.5"><span
+                        class="h-2.5 w-2.5 rounded-full bg-[#f34b7d]"></span> C++</span>
+                    <span class="inline-flex items-center gap-3">
+                      <span>★ 2</span>
+                      <span>⑂ 1</span>
+                    </span>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
+                <div
+                  class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-purple-glow to-purple-deep group-hover:w-full transition-all duration-500">
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                  <div class="flex items-start justify-between">
+                    <span
+                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-matrix text-sm">pkg</span>
+                    <span
+                      class="inline-flex items-center gap-1.5 rounded-full border border-violet-500/30 bg-violet-500/10 px-2.5 py-1 font-mono text-[10px] text-violet-400">
+                      <span class="h-1.5 w-1.5 rounded-full bg-violet-400"></span> preparing
+                    </span>
+                  </div>
+                  <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-purple-glow transition">
+                    lonoup-modules</h3>
+                  <p class="mt-2 text-sm text-ghost leading-relaxed flex-1">
+                    A suite of modular packages (Media, Social Login, Icons) currently powering internal platforms,
+                    being refined and structured for future open-source releases.
+                  </p>
+                  <div class="mt-5 flex flex-wrap gap-2">
+                    <span class="tag">PHP</span>
+                    <span class="tag tag-blue">TypeScript</span>
+                    <span class="tag">Modules</span>
+                  </div>
+                  <div
+                    class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
+                    <span class="inline-flex items-center gap-1.5"><span
+                        class="h-2.5 w-2.5 rounded-full bg-matrix"></span> Multi-lang</span>
+                    <span class="inline-flex items-center gap-3">
+                      <span>Ecosystem</span>
+                    </span>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
+                <div
+                  class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-purple-glow to-purple-deep group-hover:w-full transition-all duration-500">
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                  <div class="flex items-start justify-between">
+                    <span
+                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-purple-glow text-sm">app</span>
+                    <span
+                      class="inline-flex items-center gap-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 px-2.5 py-1 font-mono text-[10px] text-purple-400">
+                      <span class="h-1.5 w-1.5 rounded-full bg-purple-400"></span> private
+                    </span>
+                  </div>
+                  <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-purple-glow transition">
+                    smart-agri-automation</h3>
+                  <p class="mt-2 text-sm text-ghost leading-relaxed flex-1">
+                    A real-world monitoring system designed to track and manage agricultural automation processes.
+                    Turning complex data streams into actionable life-enhancing tools.
+                  </p>
+                  <div class="mt-5 flex flex-wrap gap-2">
+                    <span class="tag">Backend</span>
+                    <span class="tag tag-green">Automation</span>
+                    <span class="tag">IoT</span>
+                  </div>
+                  <div
+                    class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
+                    <span class="inline-flex items-center gap-1.5"><span
+                        class="h-2.5 w-2.5 rounded-full bg-[#f1e05a]"></span> System</span>
+                    <span class="inline-flex items-center gap-3">
+                      <span>In-use</span>
+                    </span>
+                  </div>
+                </div>
+              </article>
+
             </div>
-          </article>
+          </div>
 
-          <article
-            class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-cyan-glow/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
-            <div class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-cyan-glow to-cyan-deep group-hover:w-full transition-all duration-500"></div>
-            <div class="p-6">
-              <div class="flex items-start justify-between">
-                <span class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-cyan-glow text-sm">fork</span>
-                <span class="inline-flex items-center gap-1.5 rounded-full border border-matrix/30 bg-matrix/10 px-2.5 py-1 font-mono text-[10px] text-matrix">
-                  <span class="h-1.5 w-1.5 rounded-full bg-matrix"></span> active
-                </span>
-              </div>
-              <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-cyan-glow transition">cockpit-tools</h3>
-              <p class="mt-2 text-sm text-ghost leading-relaxed">
-                A universal AI IDE account management tool supporting Cursor, Windsurf, Copilot, and Gemini-cli. Built with Rust for quota monitoring and multi-instance handling.
-              </p>
-              <div class="mt-5 flex flex-wrap gap-2">
-                <span class="tag tag-blue">Rust</span>
-                <span class="tag tag-green">AI Tools</span>
-                <span class="tag">CLI</span>
-              </div>
-              <div class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
-                <span class="inline-flex items-center gap-1.5"><span class="h-2.5 w-2.5 rounded-full bg-[#dea584]"></span> Rust</span>
-                <span class="inline-flex items-center gap-3">
-                  <span>★ 12</span>
-                  <span>⑂ 4</span>
-                </span>
-              </div>
-            </div>
-          </article>
+          <!-- Progress dots -->
+          <div class="flex-shrink-0 flex justify-center gap-2 pb-6 pt-3">
+            <span id="proj-dot-0" class="h-1.5 w-6 rounded-full bg-purple-glow transition-all duration-300"></span>
+            <span id="proj-dot-1" class="h-1.5 w-2 rounded-full bg-line transition-all duration-300"></span>
+            <span id="proj-dot-2" class="h-1.5 w-2 rounded-full bg-line transition-all duration-300"></span>
+            <span id="proj-dot-3" class="h-1.5 w-2 rounded-full bg-line transition-all duration-300"></span>
+            <span id="proj-dot-4" class="h-1.5 w-2 rounded-full bg-line transition-all duration-300"></span>
+            <span id="proj-dot-5" class="h-1.5 w-2 rounded-full bg-line transition-all duration-300"></span>
+          </div>
+      </section>
+    </div>
 
-          <article
-            class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-cyan-glow/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
-            <div class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-cyan-glow to-cyan-deep group-hover:w-full transition-all duration-500"></div>
-            <div class="p-6">
-              <div class="flex items-start justify-between">
-                <span class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-cyan-glow text-sm">core</span>
-                <span class="inline-flex items-center gap-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 px-2.5 py-1 font-mono text-[10px] text-purple-400">
-                  <span class="h-1.5 w-1.5 rounded-full bg-purple-400"></span> private
-                </span>
-              </div>
-              <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-cyan-glow transition">lonoup-platform</h3>
-              <p class="mt-2 text-sm text-ghost leading-relaxed">
-                The internal foundation driving the LoopUp ecosystem and newbie marketplace. A modern architecture built with Next.js and TypeScript for scalable delivery.
-              </p>
-              <div class="mt-5 flex flex-wrap gap-2">
-                <span class="tag tag-blue">TypeScript</span>
-                <span class="tag">Next.js</span>
-                <span class="tag">Platform</span>
-              </div>
-              <div class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
-                <span class="inline-flex items-center gap-1.5"><span class="h-2.5 w-2.5 rounded-full bg-[#3178c6]"></span> TypeScript</span>
-                <span class="inline-flex items-center gap-3">
-                  <span>Private</span>
-                </span>
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-cyan-glow/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
-            <div class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-cyan-glow to-cyan-deep group-hover:w-full transition-all duration-500"></div>
-            <div class="p-6">
-              <div class="flex items-start justify-between">
-                <span class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-cyan-glow text-sm">repo</span>
-                <span class="inline-flex items-center gap-1.5 rounded-full border border-matrix/30 bg-matrix/10 px-2.5 py-1 font-mono text-[10px] text-matrix">
-                  <span class="h-1.5 w-1.5 rounded-full bg-matrix"></span> public
-                </span>
-              </div>
-              <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-cyan-glow transition">lonoup-tts</h3>
-              <p class="mt-2 text-sm text-ghost leading-relaxed">
-                A C++ based Text-to-Speech integration module. Exploring low-level system performance for AI voice generation and real-time audio processing.
-              </p>
-              <div class="mt-5 flex flex-wrap gap-2">
-                <span class="tag tag-blue">C++</span>
-                <span class="tag tag-green">AI</span>
-                <span class="tag">Audio</span>
-              </div>
-              <div class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
-                <span class="inline-flex items-center gap-1.5"><span class="h-2.5 w-2.5 rounded-full bg-[#f34b7d]"></span> C++</span>
-                <span class="inline-flex items-center gap-3">
-                  <span>★ 2</span>
-                  <span>⑂ 1</span>
-                </span>
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-cyan-glow/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
-            <div class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-cyan-glow to-cyan-deep group-hover:w-full transition-all duration-500"></div>
-            <div class="p-6">
-              <div class="flex items-start justify-between">
-                <span class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-matrix text-sm">pkg</span>
-                <span class="inline-flex items-center gap-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 px-2.5 py-1 font-mono text-[10px] text-sky-400">
-                  <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span> preparing
-                </span>
-              </div>
-              <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-cyan-glow transition">lonoup-modules</h3>
-              <p class="mt-2 text-sm text-ghost leading-relaxed">
-                A suite of modular packages (Media, Social Login, Icons) currently powering internal platforms, being refined and structured for future open-source releases.
-              </p>
-              <div class="mt-5 flex flex-wrap gap-2">
-                <span class="tag">PHP</span>
-                <span class="tag tag-blue">TypeScript</span>
-                <span class="tag">Modules</span>
-              </div>
-              <div class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
-                <span class="inline-flex items-center gap-1.5"><span class="h-2.5 w-2.5 rounded-full bg-matrix"></span> Multi-lang</span>
-                <span class="inline-flex items-center gap-3">
-                  <span>Ecosystem</span>
-                </span>
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-cyan-glow/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
-            <div class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-cyan-glow to-cyan-deep group-hover:w-full transition-all duration-500"></div>
-            <div class="p-6">
-              <div class="flex items-start justify-between">
-                <span class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-cyan-glow text-sm">app</span>
-                <span class="inline-flex items-center gap-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 px-2.5 py-1 font-mono text-[10px] text-purple-400">
-                  <span class="h-1.5 w-1.5 rounded-full bg-purple-400"></span> private
-                </span>
-              </div>
-              <h3 class="mt-5 text-lg font-semibold text-white group-hover:text-cyan-glow transition">smart-agri-automation</h3>
-              <p class="mt-2 text-sm text-ghost leading-relaxed">
-                A real-world monitoring system designed to track and manage agricultural automation processes. Turning complex data streams into actionable life-enhancing tools.
-              </p>
-              <div class="mt-5 flex flex-wrap gap-2">
-                <span class="tag">Backend</span>
-                <span class="tag tag-green">Automation</span>
-                <span class="tag">IoT</span>
-              </div>
-              <div class="mt-6 flex items-center justify-between border-t border-line pt-4 font-mono text-xs text-ghost">
-                <span class="inline-flex items-center gap-1.5"><span class="h-2.5 w-2.5 rounded-full bg-[#f1e05a]"></span> System</span>
-                <span class="inline-flex items-center gap-3">
-                  <span>In-use</span>
-                </span>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="relative py-24 md:py-32 border-t border-line overflow-hidden">
+    <section id="contact"
+      class="sticky top-[min(0px,calc(100vh-100%))] z-50 border-t border-line overflow-hidden bg-void rounded-t-[40px] shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
       <div class="absolute inset-0 bg-gradient-to-b from-panel/40 via-void to-void pointer-events-none"
         aria-hidden="true"></div>
       <div
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[700px] rounded-full bg-cyan-glow/8 blur-[130px] pointer-events-none"
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[700px] rounded-full bg-purple-glow/8 blur-[130px] pointer-events-none"
         aria-hidden="true"></div>
 
-      <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-8 py-12 md:py-16">
         <div class="max-w-3xl mx-auto text-center reveal">
-          <p class="font-mono text-xs uppercase tracking-[0.3em] text-cyan-glow mb-4">04 — Contact</p>
+          <p class="font-mono text-xs uppercase tracking-[0.3em] text-purple-glow mb-4">04 — Contact</p>
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
             Let's build the <span
-              class="bg-gradient-to-r from-cyan-glow to-matrix bg-clip-text text-transparent">lonoup</span> together
+              class="bg-gradient-to-r from-purple-glow to-pink-500 bg-clip-text text-transparent">lonoup</span> together
           </h2>
           <p class="mt-5 text-lg text-ghost leading-relaxed">
             Collaboration, open-source ideas, or just a technical conversation — every great node starts with a single
@@ -680,73 +802,87 @@
           </p>
         </div>
 
-        <div class="mt-14 grid md:grid-cols-3 gap-5 max-w-4xl mx-auto">
-          <a href="https://github.com/pnnnhan99" target="_blank" rel="noopener noreferrer"
-            class="group rounded-2xl border border-line bg-panel/70 p-6 text-center hover:border-cyan-glow/50 hover:-translate-y-1.5 transition-all duration-300 reveal">
-            <span
-              class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-void border border-line text-white group-hover:text-cyan-glow group-hover:border-cyan-glow/40 transition">
-              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z" />
-              </svg>
-            </span>
-            <p class="mt-4 font-semibold text-white">GitHub</p>
-            <p class="mt-1 font-mono text-xs text-ghost">@pnnnhan99</p>
-          </a>
-
-          <a href="https://lonoup.com" target="_blank" rel="noopener noreferrer"
-            class="group rounded-2xl border border-line bg-panel/70 p-6 text-center hover:border-matrix/50 hover:-translate-y-1.5 transition-all duration-300 reveal">
-            <span
-              class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-void border border-line font-mono text-lg text-white group-hover:text-matrix group-hover:border-matrix/40 transition">∞</span>
-            <p class="mt-4 font-semibold text-white">lonoup.com</p>
-            <p class="mt-1 font-mono text-xs text-ghost">Services & Ecosystem (Soon)</p>
-          </a>
-
-          <a href="mailto:hello@lonoup.com"
-            class="group rounded-2xl border border-line bg-panel/70 p-6 text-center hover:border-cyan-deep/60 hover:-translate-y-1.5 transition-all duration-300 reveal">
-            <span
-              class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-void border border-line text-white group-hover:text-sky-400 group-hover:border-sky-500/40 transition">
-              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-                <rect x="3" y="5" width="18" height="14" rx="2" />
-                <path stroke-linecap="round" d="m3 7 9 6 9-6" />
-              </svg>
-            </span>
-            <p class="mt-4 font-semibold text-white">Email</p>
-            <p class="mt-1 font-mono text-xs text-ghost">hello@lonoup.com</p>
-          </a>
-        </div>
-
-        <div class="mt-12 max-w-4xl mx-auto reveal">
-          <form id="contact-form" class="rounded-2xl border border-line bg-panel/70 p-6 sm:p-8 backdrop-blur-sm">
-            <p class="font-mono text-xs text-ghost mb-5">// send a signal — goes straight to your mail client</p>
-            <div class="grid sm:grid-cols-2 gap-4">
+        <div class="mt-14 grid lg:grid-cols-12 gap-5 items-stretch">
+          <!-- Left Column (Cards) -->
+          <div class="lg:col-span-5 flex flex-col gap-5 h-full">
+            <a href="https://github.com/pnnnhan99" target="_blank" rel="noopener noreferrer"
+              class="flex-1 group flex flex-col sm:flex-row items-center justify-center sm:justify-start sm:text-left gap-4 rounded-2xl border border-line bg-panel/70 p-5 hover:border-purple-glow/50 hover:-translate-y-1 transition-all duration-300 reveal text-center">
+              <span
+                class="flex shrink-0 h-12 w-12 items-center justify-center rounded-xl bg-void border border-line text-white group-hover:text-purple-glow group-hover:border-purple-glow/40 transition">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z" />
+                </svg>
+              </span>
               <div>
-                <label for="name" class="block font-mono text-xs text-ghost mb-2">NAME</label>
-                <input id="name" name="name" type="text" required placeholder="Ada Lovelace"
-                  class="w-full rounded-lg border border-line bg-void px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-cyan-glow/60 transition" />
+                <p class="font-semibold text-white">GitHub</p>
+                <p class="mt-1 font-mono text-xs text-ghost">@pnnnhan99</p>
               </div>
+            </a>
+
+            <a href="https://lonoup.com" target="_blank" rel="noopener noreferrer"
+              class="flex-1 group flex flex-col sm:flex-row items-center justify-center sm:justify-start sm:text-left gap-4 rounded-2xl border border-line bg-panel/70 p-5 hover:border-matrix/50 hover:-translate-y-1 transition-all duration-300 reveal text-center">
+              <span
+                class="flex shrink-0 h-12 w-12 items-center justify-center rounded-xl bg-void border border-line font-mono text-lg text-white group-hover:text-matrix group-hover:border-matrix/40 transition">∞</span>
               <div>
-                <label for="email" class="block font-mono text-xs text-ghost mb-2">EMAIL</label>
-                <input id="email" name="email" type="email" required placeholder="ada@dev.io"
-                  class="w-full rounded-lg border border-line bg-void px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-cyan-glow/60 transition" />
+                <p class="font-semibold text-white">lonoup.com</p>
+                <p class="mt-1 font-mono text-xs text-ghost">Services & Ecosystem (Soon)</p>
               </div>
-            </div>
-            <div class="mt-4">
-              <label for="message" class="block font-mono text-xs text-ghost mb-2">MESSAGE</label>
-              <textarea id="message" name="message" rows="5" required
-                placeholder="Let's talk about open source, AI, or your next product..."
-                class="w-full rounded-lg border border-line bg-void px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-cyan-glow/60 transition resize-none"></textarea>
-            </div>
-            <button type="submit"
-              class="group mt-5 inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-cyan-glow px-7 py-3.5 font-medium text-void hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] transition-all duration-300">
-              Send Message
-              <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
-                stroke-width="2.2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </button>
-            <p id="form-status" class="mt-4 hidden font-mono text-xs text-matrix"></p>
-          </form>
+            </a>
+
+            <a href="mailto:hello@lonoup.com"
+              class="flex-1 group flex flex-col sm:flex-row items-center justify-center sm:justify-start sm:text-left gap-4 rounded-2xl border border-line bg-panel/70 p-5 hover:border-purple-deep/60 hover:-translate-y-1 transition-all duration-300 reveal text-center">
+              <span
+                class="flex shrink-0 h-12 w-12 items-center justify-center rounded-xl bg-void border border-line text-white group-hover:text-violet-400 group-hover:border-violet-500/40 transition">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path stroke-linecap="round" d="m3 7 9 6 9-6" />
+                </svg>
+              </span>
+              <div>
+                <p class="font-semibold text-white">Email</p>
+                <p class="mt-1 font-mono text-xs text-ghost">hello@lonoup.com</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Right Column (Form) -->
+          <div class="lg:col-span-7 reveal mt-8 lg:mt-0 h-full flex flex-col">
+            <form id="contact-form"
+              class="rounded-2xl border border-line bg-panel/70 p-6 sm:p-8 backdrop-blur-sm flex-1 flex flex-col">
+              <p class="font-mono text-xs text-ghost mb-5">// send a signal — goes straight to your mail client</p>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="name" class="block font-mono text-xs text-ghost mb-2">NAME</label>
+                  <input id="name" name="name" type="text" required placeholder="Ada Lovelace"
+                    class="w-full rounded-lg border border-line bg-void px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-purple-glow/60 transition" />
+                </div>
+                <div>
+                  <label for="email" class="block font-mono text-xs text-ghost mb-2">EMAIL</label>
+                  <input id="email" name="email" type="email" required placeholder="ada@dev.io"
+                    class="w-full rounded-lg border border-line bg-void px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-purple-glow/60 transition" />
+                </div>
+              </div>
+              <div class="mt-4 flex-grow">
+                <label for="message" class="block font-mono text-xs text-ghost mb-2">MESSAGE</label>
+                <textarea id="message" name="message" rows="5" required
+                  placeholder="Let's talk about open source, AI, or your next product..."
+                  class="w-full h-full min-h-[120px] rounded-lg border border-line bg-void px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-purple-glow/60 transition resize-none"></textarea>
+              </div>
+              <button type="submit"
+                class="magnetic-btn group mt-5 inline-flex w-full sm:w-auto items-center justify-center rounded-xl bg-purple-glow px-7 py-3.5 font-medium text-void hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] transition-shadow duration-300">
+                
+                <span class="magnetic-content flex items-center gap-2 pointer-events-none">
+                  Send Message
+                  <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </span>
+                
+              </button>
+              <p id="form-status" class="mt-4 hidden font-mono text-xs text-matrix"></p>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -757,7 +893,7 @@
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="flex items-center gap-2.5">
           <span
-            class="flex h-8 w-8 items-center justify-center rounded-lg border border-cyan-glow/40 bg-cyan-glow/10 font-mono text-sm text-cyan-glow">∞</span>
+            class="flex h-8 w-8 items-center justify-center rounded-lg border border-purple-glow/40 bg-purple-glow/10 font-mono text-sm text-purple-glow">∞</span>
           <div>
             <p class="text-sm font-semibold text-white">pnnnhan99 <span class="text-ghost font-normal">·
                 lonoup.com</span></p>
@@ -766,11 +902,11 @@
         </div>
 
         <div class="flex items-center gap-6 font-mono text-xs text-ghost">
-          <a href="#about" class="hover:text-cyan-glow transition">About</a>
-          <a href="#stack" class="hover:text-cyan-glow transition">Stack</a>
-          <a href="#projects" class="hover:text-cyan-glow transition">Projects</a>
+          <a href="#about" class="hover:text-purple-glow transition">About</a>
+          <a href="#stack" class="hover:text-purple-glow transition">Stack</a>
+          <a href="#projects" class="hover:text-purple-glow transition">Projects</a>
           <a href="https://github.com/pnnnhan99" target="_blank" rel="noopener noreferrer"
-            class="hover:text-cyan-glow transition">GitHub</a>
+            class="hover:text-purple-glow transition">GitHub</a>
         </div>
 
         <p class="font-mono text-[11px] text-slate-600">© <span id="year"></span> pnnnhan99 — built for the open web.
