@@ -27,7 +27,7 @@
             void: '#05070a',
             panel: '#0a0e14',
             line: '#161d29',
-            purple: { glow: '#a855f7', deep: '#7c3aed' },
+            purple: { glow: '#a855f7', deep: '#7c3aed', 950: '#2e1065' },
             matrix: '#ec4899',
             ghost: '#8b9bb4'
           },
@@ -64,7 +64,7 @@
           <a href="#about"
             class="nav-link px-4 py-2 text-sm text-ghost hover:text-white transition rounded-md">About</a>
           <a href="#stack"
-            class="nav-link px-4 py-2 text-sm text-ghost hover:text-white transition rounded-md">Stack</a>
+            class="nav-link px-4 py-2 text-sm text-ghost hover:text-white transition rounded-md">Architecture</a>
           <a href="#projects"
             class="nav-link px-4 py-2 text-sm text-ghost hover:text-white transition rounded-md">Projects</a>
           <a href="#contact"
@@ -98,7 +98,7 @@
         <a href="#about"
           class="mobile-link rounded-lg px-4 py-3 text-ghost hover:text-white hover:bg-panel transition">About</a>
         <a href="#stack"
-          class="mobile-link rounded-lg px-4 py-3 text-ghost hover:text-white hover:bg-panel transition">Stack</a>
+          class="mobile-link rounded-lg px-4 py-3 text-ghost hover:text-white hover:bg-panel transition">Architecture</a>
         <a href="#projects"
           class="mobile-link rounded-lg px-4 py-3 text-ghost hover:text-white hover:bg-panel transition">Projects</a>
         <a href="#contact"
@@ -382,105 +382,12 @@
     <section id="stack"
       class="sticky top-[min(0px,calc(100vh-100%))] z-30 min-h-screen border-t border-line bg-void rounded-t-[40px] shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 py-24 md:py-32">
-        <div class="reveal max-w-3xl">
-          <p class="font-mono text-xs uppercase tracking-[0.3em] text-purple-glow mb-4">02 — Stack</p>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">Tools I build with</h2>
-          <p class="mt-5 text-lg text-ghost leading-relaxed">
-            A battle-tested backend core, actively being extended with the languages and tooling of the AI era.
-          </p>
+        <div class="reveal">
+          <p class="font-mono text-xs uppercase tracking-[0.3em] text-purple-glow mb-4">02 — Architecture</p>
         </div>
-
-        <div class="mt-14 grid md:grid-cols-3 gap-6">
-          <article
-            class="skill-card group rounded-2xl border border-line bg-void/80 p-7 hover:border-purple-glow/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
-            <div class="flex items-center justify-between">
-              <span
-                class="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-glow/10 border border-purple-glow/30 text-purple-glow">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-              <span class="font-mono text-xs text-ghost">// backend</span>
-            </div>
-            <h3 class="mt-5 text-xl font-semibold text-white">Backend</h3>
-            <p class="mt-2 text-sm text-ghost leading-relaxed">Robust APIs, authentication, queues, and architecture
-              that stays clean as products grow.</p>
-            <div class="mt-5 flex flex-wrap gap-2">
-              <span class="tag">Laravel</span>
-              <span class="tag">PHP</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">Express</span>
-              <span class="tag">REST / API</span>
-              <span class="tag">MySQL</span>
-              <span class="tag">Redis</span>
-            </div>
-            <div class="mt-6 h-1.5 rounded-full bg-line overflow-hidden">
-              <div class="skill-bar h-full rounded-full bg-gradient-to-r from-purple-deep to-purple-glow"
-                data-level="92%">
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="skill-card group rounded-2xl border border-line bg-void/80 p-7 hover:border-matrix/50 transition-all duration-300 hover:-translate-y-1.5 reveal">
-            <div class="flex items-center justify-between">
-              <span
-                class="flex h-12 w-12 items-center justify-center rounded-xl bg-matrix/10 border border-matrix/30 text-matrix">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="3" />
-                  <path stroke-linecap="round"
-                    d="M12 2v4m0 12v4M2 12h4m12 0h4M5 5l2.8 2.8M16.2 16.2 19 19M19 5l-2.8 2.8M7.8 16.2 5 19" />
-                </svg>
-              </span>
-              <span class="font-mono text-xs text-ghost">// intelligence</span>
-            </div>
-            <h3 class="mt-5 text-xl font-semibold text-white">AI &amp; Data</h3>
-            <p class="mt-2 text-sm text-ghost leading-relaxed">Bridging production backends with models, agents, and
-              data pipelines that ship real value.</p>
-            <div class="mt-5 flex flex-wrap gap-2">
-              <span class="tag tag-green">Python</span>
-              <span class="tag tag-green">AI Integration</span>
-              <span class="tag tag-green">LLM APIs</span>
-              <span class="tag tag-green">Automation</span>
-              <span class="tag tag-green">Data Pipelines</span>
-            </div>
-            <div class="mt-6 h-1.5 rounded-full bg-line overflow-hidden">
-              <div class="skill-bar h-full rounded-full bg-gradient-to-r from-pink-600 to-pink-500" data-level="78%">
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="skill-card group rounded-2xl border border-line bg-void/80 p-7 hover:border-purple-deep/60 transition-all duration-300 hover:-translate-y-1.5 reveal">
-            <div class="flex items-center justify-between">
-              <span
-                class="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/10 border border-violet-500/30 text-violet-400">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M14.7 6.3a5 5 0 1 0-7.4 7.4L3 18l3 3 4.3-4.3a5 5 0 0 0 7.4-7.4l-3 3-2.3-2.3 3-3Z" />
-                </svg>
-              </span>
-              <span class="font-mono text-xs text-ghost">// workflow</span>
-            </div>
-            <h3 class="mt-5 text-xl font-semibold text-white">Tools &amp; Open Source</h3>
-            <p class="mt-2 text-sm text-ghost leading-relaxed">The daily toolkit for collaborating in public and keeping
-              delivery fast and reliable.</p>
-            <div class="mt-5 flex flex-wrap gap-2">
-              <span class="tag tag-blue">Git</span>
-              <span class="tag tag-blue">GitHub</span>
-              <span class="tag tag-blue">Linux</span>
-              <span class="tag tag-blue">Docker</span>
-              <span class="tag tag-blue">CI / CD</span>
-              <span class="tag tag-blue">OSS Workflow</span>
-            </div>
-            <div class="mt-6 h-1.5 rounded-full bg-line overflow-hidden">
-              <div class="skill-bar h-full rounded-full bg-gradient-to-r from-violet-700 to-violet-400"
-                data-level="88%">
-              </div>
-            </div>
-          </article>
-        </div>
-
+        <img src="https://raw.githubusercontent.com/pnnnhan99/pnnnhan99.github.io/main/img/tech-universe.svg" alt="Tech Universe">
+        
+        <!-- Tech Marquee -->
         <div class="mt-12 overflow-hidden rounded-2xl border border-line bg-void/60 py-4 reveal">
           <div class="marquee font-mono text-sm text-ghost whitespace-nowrap">
             <span class="mx-6 text-purple-glow">◆</span><span>Laravel</span>
@@ -903,7 +810,7 @@
 
         <div class="flex items-center gap-6 font-mono text-xs text-ghost">
           <a href="#about" class="hover:text-purple-glow transition">About</a>
-          <a href="#stack" class="hover:text-purple-glow transition">Stack</a>
+          <a href="#stack" class="hover:text-purple-glow transition">Architecture</a>
           <a href="#projects" class="hover:text-purple-glow transition">Projects</a>
           <a href="https://github.com/pnnnhan99" target="_blank" rel="noopener noreferrer"
             class="hover:text-purple-glow transition">GitHub</a>
