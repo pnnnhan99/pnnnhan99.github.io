@@ -1,6 +1,10 @@
 :root {
   --purple: #a855f7;
   --matrix: #ec4899;
+  --purple-gradient: linear-gradient(135deg, #090212 0%, #100524 48%, #0b0318 100%);
+  --glassy-purple: linear-gradient(to bottom, rgba(24, 11, 42, 0.96) 0%, rgba(12, 5, 23, 0.97) 100%);
+  --glassy-border: 1px solid rgba(183, 75, 255, 0.3);
+  --glassy-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
 html {
@@ -9,6 +13,34 @@ html {
 
 body {
   overflow-x: hidden;
+}
+
+/* Dark Purple Technology Theme Section Backgrounds */
+#about {
+  background: linear-gradient(135deg, #090212 0%, #100524 48%, #0b0318 100%);
+  color: #f6edff;
+}
+
+#stack {
+  background: linear-gradient(135deg, #090212 0%, #100524 48%, #0b0318 100%);
+  color: #f6edff;
+}
+
+#projects {
+  background: linear-gradient(135deg, #090212 0%, #100524 48%, #0b0318 100%);
+  color: #f6edff;
+}
+
+#contact {
+  background: linear-gradient(135deg, #090212 0%, #100524 48%, #0b0318 100%);
+  color: #f6edff;
+}
+
+/* Glassy Purple Card Styles */
+.glassy-purple-card {
+  background: linear-gradient(to bottom, rgba(24, 11, 42, 0.96) 0%, rgba(12, 5, 23, 0.97) 100%);
+  border: 1px solid rgba(183, 75, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
 .noise-overlay {

@@ -29,7 +29,9 @@
             line: '#161d29',
             purple: { glow: '#a855f7', deep: '#7c3aed', 950: '#2e1065' },
             matrix: '#ec4899',
-            ghost: '#8b9bb4'
+            ghost: '#8b9bb4',
+            purpleGradient: 'linear-gradient(135deg, #090212 0%, #100524 48%, #0b0318 100%)',
+            glassyPurple: 'linear-gradient(to bottom, rgba(24, 11, 42, 0.96) 0%, rgba(12, 5, 23, 0.97) 100%)'
           },
           fontFamily: {
             display: ['"Space Grotesk"', 'sans-serif'],
@@ -93,7 +95,7 @@
       </div>
     </div>
 
-    <div id="mobile-menu" class="md:hidden hidden border-t border-line bg-void/95 backdrop-blur-xl">
+    <div id="mobile-menu" class="md:hidden hidden border-t border-line backdrop-blur-xl" style="background: linear-gradient(135deg, #090212 0%, #100524 48%, #0b0318 100%);">
       <div class="px-5 py-4 flex flex-col gap-1">
         <a href="#about"
           class="mobile-link rounded-lg px-4 py-3 text-ghost hover:text-white hover:bg-panel transition">About</a>
@@ -110,7 +112,7 @@
   </nav>
 
   <main>
-    <section id="hero" class="sticky top-0 z-10 h-screen flex items-center overflow-hidden bg-void">
+    <section id="hero" class="sticky top-0 z-10 h-screen flex items-center overflow-hidden" style="background: linear-gradient(135deg, #090212 0%, #100524 48%, #0b0318 100%);">
 
       <canvas id="node-canvas" class="absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
       <div class="absolute inset-0 bg-gradient-to-b from-void/40 via-void/70 to-void pointer-events-none"
@@ -191,7 +193,7 @@
                 class="absolute -inset-6 rounded-3xl bg-gradient-to-tr from-purple-glow/20 via-transparent to-pink-500/20 blur-2xl"
                 aria-hidden="true"></div>
 
-              <div class="relative rounded-2xl border border-line bg-panel/80 backdrop-blur-xl shadow-2xl p-6 md:p-8">
+              <div class="glassy-purple-card relative rounded-2xl backdrop-blur-xl shadow-2xl p-6 md:p-8">
 
                 <div class="flex items-center justify-between mb-8">
                   <div class="flex items-center gap-2.5">
@@ -280,7 +282,7 @@
     </section>
 
     <section id="about"
-      class="sticky top-[min(0px,calc(100vh-100%))] z-20 min-h-screen border-t border-line flex items-center bg-panel rounded-t-[40px] shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
+      class="sticky top-[min(0px,calc(100vh-100%))] z-20 min-h-screen border-t border-line flex items-center rounded-t-[40px] shadow-[0_-10px_40px_rgba(0,0,0,0.5)]" style="background: linear-gradient(135deg, #090212 0%, #100524 48%, #0b0318 100%); color: #f6edff;">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 w-full">
         <div class="reveal">
           <p class="font-mono text-xs uppercase tracking-[0.3em] text-purple-glow mb-4">01 — About</p>
@@ -311,17 +313,17 @@
             </p>
 
             <div class="grid sm:grid-cols-3 gap-4 pt-4">
-              <div class="rounded-xl border border-line bg-panel p-5 hover:border-purple-glow/40 transition">
+              <div class="glassy-purple-card rounded-xl p-5 hover:border-purple-glow/40 transition">
                 <p class="font-mono text-2xl text-purple-glow">01</p>
                 <p class="mt-2 text-sm text-slate-300"><strong class="text-white font-medium">Web Services:</strong>
                   Delivering robust, custom web development and business solutions.</p>
               </div>
-              <div class="rounded-xl border border-line bg-panel p-5 hover:border-purple-glow/40 transition">
+              <div class="glassy-purple-card rounded-xl p-5 hover:border-purple-glow/40 transition">
                 <p class="font-mono text-2xl text-purple-glow">02</p>
                 <p class="mt-2 text-sm text-slate-300"><strong class="text-white font-medium">Ecosystem:</strong>
                   Building a suite of connected tools (Social, Studio, Apps).</p>
               </div>
-              <div class="rounded-xl border border-line bg-panel p-5 hover:border-purple-glow/40 transition">
+              <div class="glassy-purple-card rounded-xl p-5 hover:border-purple-glow/40 transition">
                 <p class="font-mono text-2xl text-purple-glow">03</p>
                 <p class="mt-2 text-sm text-slate-300"><strong class="text-white font-medium">Community:</strong>
                   Sharing insights via blogs and contributing to Open Source.</p>
@@ -331,7 +333,7 @@
 
           <div class="lg:col-span-5 reveal">
             <div
-              class="relative rounded-2xl border border-line bg-gradient-to-b from-panel to-void p-8 h-full overflow-hidden">
+              class="glassy-purple-card relative rounded-2xl p-8 h-full overflow-hidden">
               <div class="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-purple-glow/10 blur-3xl"
                 aria-hidden="true"></div>
 
@@ -380,7 +382,7 @@
     </section>
 
     <section id="stack"
-      class="sticky top-[min(0px,calc(100vh-100%))] z-30 min-h-screen border-t border-line bg-void rounded-t-[40px] shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
+      class="sticky top-[min(0px,calc(100vh-100%))] z-30 min-h-screen border-t border-line rounded-t-[40px] shadow-[0_-10px_40px_rgba(0,0,0,0.5)]" style="background: linear-gradient(135deg, #090212 0%, #100524 48%, #0b0318 100%); color: #f6edff;">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 py-24 md:py-32">
         <div class="reveal">
           <p class="font-mono text-xs uppercase tracking-[0.3em] text-purple-glow mb-4">02 — Architecture</p>
@@ -388,7 +390,7 @@
         <img src="https://raw.githubusercontent.com/pnnnhan99/pnnnhan99.github.io/main/img/tech-universe.svg" alt="Tech Universe">
         
         <!-- Tech Marquee -->
-        <div class="mt-12 overflow-hidden rounded-2xl border border-line bg-void/60 py-4 reveal">
+        <div class="mt-12 overflow-hidden rounded-2xl border border-line glassy-purple-card py-4 reveal">
           <div class="marquee font-mono text-sm text-ghost whitespace-nowrap">
             <span class="mx-6 text-purple-glow">◆</span><span>Laravel</span>
             <span class="mx-6 text-purple-glow">◆</span><span>Node.js</span>
@@ -414,7 +416,7 @@
     <!-- Projects scroll wrapper — gives GSAP room to drive horizontal pan -->
     <div id="projects-wrapper" class="relative z-40" style="height: calc(100vh + 360px);">
       <section id="projects"
-        class="sticky top-0 h-screen border-t border-line bg-panel rounded-t-[40px] shadow-[0_-10px_40px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col">
+        class="sticky top-0 h-screen border-t border-line rounded-t-[40px] shadow-[0_-10px_40px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col" style="background: linear-gradient(135deg, #090212 0%, #100524 48%, #0b0318 100%); color: #f6edff;">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 pt-24 md:pt-32 pb-6 flex-shrink-0">
           <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 reveal">
             <div class="max-w-2xl">
@@ -455,14 +457,14 @@
               class="absolute top-0 left-0 flex items-stretch gap-6 px-5 sm:px-8 pb-10 will-change-transform">
 
               <article
-                class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
+                class="project-card group relative glassy-purple-card rounded-2xl overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
                 <div
                   class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-purple-glow to-purple-deep group-hover:w-full transition-all duration-500">
                 </div>
                 <div class="p-6 flex flex-col flex-1">
                   <div class="flex items-start justify-between">
                     <span
-                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-purple-glow text-sm">repo</span>
+                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-purple-glow/30 bg-purple-glow/10 font-mono text-purple-glow text-sm">repo</span>
                     <span
                       class="inline-flex items-center gap-1.5 rounded-full border border-matrix/30 bg-matrix/10 px-2.5 py-1 font-mono text-[10px] text-matrix">
                       <span class="h-1.5 w-1.5 rounded-full bg-matrix"></span> public
@@ -492,14 +494,14 @@
               </article>
 
               <article
-                class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
+                class="project-card group relative glassy-purple-card rounded-2xl overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
                 <div
                   class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-purple-glow to-purple-deep group-hover:w-full transition-all duration-500">
                 </div>
                 <div class="p-6 flex flex-col flex-1">
                   <div class="flex items-start justify-between">
                     <span
-                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-purple-glow text-sm">fork</span>
+                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-purple-glow/30 bg-purple-glow/10 font-mono text-purple-glow text-sm">fork</span>
                     <span
                       class="inline-flex items-center gap-1.5 rounded-full border border-matrix/30 bg-matrix/10 px-2.5 py-1 font-mono text-[10px] text-matrix">
                       <span class="h-1.5 w-1.5 rounded-full bg-matrix"></span> active
@@ -529,14 +531,14 @@
               </article>
 
               <article
-                class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
+                class="project-card group relative glassy-purple-card rounded-2xl overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
                 <div
                   class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-purple-glow to-purple-deep group-hover:w-full transition-all duration-500">
                 </div>
                 <div class="p-6 flex flex-col flex-1">
                   <div class="flex items-start justify-between">
                     <span
-                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-purple-glow text-sm">core</span>
+                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-purple-glow/30 bg-purple-glow/10 font-mono text-purple-glow text-sm">core</span>
                     <span
                       class="inline-flex items-center gap-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 px-2.5 py-1 font-mono text-[10px] text-purple-400">
                       <span class="h-1.5 w-1.5 rounded-full bg-purple-400"></span> private
@@ -565,14 +567,14 @@
               </article>
 
               <article
-                class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
+                class="project-card group relative glassy-purple-card rounded-2xl overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
                 <div
                   class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-purple-glow to-purple-deep group-hover:w-full transition-all duration-500">
                 </div>
                 <div class="p-6 flex flex-col flex-1">
                   <div class="flex items-start justify-between">
                     <span
-                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-purple-glow text-sm">repo</span>
+                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-purple-glow/30 bg-purple-glow/10 font-mono text-purple-glow text-sm">repo</span>
                     <span
                       class="inline-flex items-center gap-1.5 rounded-full border border-matrix/30 bg-matrix/10 px-2.5 py-1 font-mono text-[10px] text-matrix">
                       <span class="h-1.5 w-1.5 rounded-full bg-matrix"></span> public
@@ -602,14 +604,14 @@
               </article>
 
               <article
-                class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
+                class="project-card group relative glassy-purple-card rounded-2xl overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
                 <div
                   class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-purple-glow to-purple-deep group-hover:w-full transition-all duration-500">
                 </div>
                 <div class="p-6 flex flex-col flex-1">
                   <div class="flex items-start justify-between">
                     <span
-                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-matrix text-sm">pkg</span>
+                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-purple-glow/30 bg-purple-glow/10 font-mono text-matrix text-sm">pkg</span>
                     <span
                       class="inline-flex items-center gap-1.5 rounded-full border border-violet-500/30 bg-violet-500/10 px-2.5 py-1 font-mono text-[10px] text-violet-400">
                       <span class="h-1.5 w-1.5 rounded-full bg-violet-400"></span> preparing
@@ -638,14 +640,14 @@
               </article>
 
               <article
-                class="project-card group relative rounded-2xl border border-line bg-panel/70 overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
+                class="project-card group relative glassy-purple-card rounded-2xl overflow-hidden hover:border-purple-glow/50 transition-all duration-300 flex-shrink-0 w-[340px] flex flex-col">
                 <div
                   class="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-purple-glow to-purple-deep group-hover:w-full transition-all duration-500">
                 </div>
                 <div class="p-6 flex flex-col flex-1">
                   <div class="flex items-start justify-between">
                     <span
-                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-void font-mono text-purple-glow text-sm">app</span>
+                      class="flex h-11 w-11 items-center justify-center rounded-lg border border-purple-glow/30 bg-purple-glow/10 font-mono text-purple-glow text-sm">app</span>
                     <span
                       class="inline-flex items-center gap-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 px-2.5 py-1 font-mono text-[10px] text-purple-400">
                       <span class="h-1.5 w-1.5 rounded-full bg-purple-400"></span> private
@@ -689,7 +691,7 @@
     </div>
 
     <section id="contact"
-      class="sticky top-[min(0px,calc(100vh-100%))] z-50 border-t border-line overflow-hidden bg-void rounded-t-[40px] shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
+      class="sticky top-[min(0px,calc(100vh-100%))] z-50 border-t border-line overflow-hidden rounded-t-[40px] shadow-[0_-10px_40px_rgba(0,0,0,0.5)]" style="background: linear-gradient(135deg, #090212 0%, #100524 48%, #0b0318 100%); color: #f6edff;">
       <div class="absolute inset-0 bg-gradient-to-b from-panel/40 via-void to-void pointer-events-none"
         aria-hidden="true"></div>
       <div
@@ -713,9 +715,9 @@
           <!-- Left Column (Cards) -->
           <div class="lg:col-span-5 flex flex-col gap-5 h-full">
             <a href="https://github.com/pnnnhan99" target="_blank" rel="noopener noreferrer"
-              class="flex-1 group flex flex-col sm:flex-row items-center justify-center sm:justify-start sm:text-left gap-4 rounded-2xl border border-line bg-panel/70 p-5 hover:border-purple-glow/50 hover:-translate-y-1 transition-all duration-300 reveal text-center">
+              class="flex-1 group flex flex-col sm:flex-row items-center justify-center sm:justify-start sm:text-left gap-4 glassy-purple-card rounded-2xl p-5 hover:border-purple-glow/50 hover:-translate-y-1 transition-all duration-300 reveal text-center">
               <span
-                class="flex shrink-0 h-12 w-12 items-center justify-center rounded-xl bg-void border border-line text-white group-hover:text-purple-glow group-hover:border-purple-glow/40 transition">
+                class="flex shrink-0 h-12 w-12 items-center justify-center rounded-xl border border-purple-glow/30 bg-purple-glow/10 text-white group-hover:text-purple-glow group-hover:border-purple-glow/40 transition">
                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z" />
@@ -728,9 +730,9 @@
             </a>
 
             <a href="https://lonoup.com" target="_blank" rel="noopener noreferrer"
-              class="flex-1 group flex flex-col sm:flex-row items-center justify-center sm:justify-start sm:text-left gap-4 rounded-2xl border border-line bg-panel/70 p-5 hover:border-matrix/50 hover:-translate-y-1 transition-all duration-300 reveal text-center">
+              class="flex-1 group flex flex-col sm:flex-row items-center justify-center sm:justify-start sm:text-left gap-4 glassy-purple-card rounded-2xl p-5 hover:border-matrix/50 hover:-translate-y-1 transition-all duration-300 reveal text-center">
               <span
-                class="flex shrink-0 h-12 w-12 items-center justify-center rounded-xl bg-void border border-line font-mono text-lg text-white group-hover:text-matrix group-hover:border-matrix/40 transition">∞</span>
+                class="flex shrink-0 h-12 w-12 items-center justify-center rounded-xl border border-purple-glow/30 bg-purple-glow/10 font-mono text-lg text-white group-hover:text-matrix group-hover:border-matrix/40 transition">∞</span>
               <div>
                 <p class="font-semibold text-white">lonoup.com</p>
                 <p class="mt-1 font-mono text-xs text-ghost">Services & Ecosystem (Soon)</p>
@@ -738,9 +740,9 @@
             </a>
 
             <a href="mailto:hello@lonoup.com"
-              class="flex-1 group flex flex-col sm:flex-row items-center justify-center sm:justify-start sm:text-left gap-4 rounded-2xl border border-line bg-panel/70 p-5 hover:border-purple-deep/60 hover:-translate-y-1 transition-all duration-300 reveal text-center">
+              class="flex-1 group flex flex-col sm:flex-row items-center justify-center sm:justify-start sm:text-left gap-4 glassy-purple-card rounded-2xl p-5 hover:border-purple-deep/60 hover:-translate-y-1 transition-all duration-300 reveal text-center">
               <span
-                class="flex shrink-0 h-12 w-12 items-center justify-center rounded-xl bg-void border border-line text-white group-hover:text-violet-400 group-hover:border-violet-500/40 transition">
+                class="flex shrink-0 h-12 w-12 items-center justify-center rounded-xl border border-purple-glow/30 bg-purple-glow/10 text-white group-hover:text-violet-400 group-hover:border-violet-500/40 transition">
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                   <rect x="3" y="5" width="18" height="14" rx="2" />
                   <path stroke-linecap="round" d="m3 7 9 6 9-6" />
@@ -756,25 +758,25 @@
           <!-- Right Column (Form) -->
           <div class="lg:col-span-7 reveal mt-8 lg:mt-0 h-full flex flex-col">
             <form id="contact-form"
-              class="rounded-2xl border border-line bg-panel/70 p-6 sm:p-8 backdrop-blur-sm flex-1 flex flex-col">
+              class="glassy-purple-card rounded-2xl p-6 sm:p-8 backdrop-blur-sm flex-1 flex flex-col">
               <p class="font-mono text-xs text-ghost mb-5">// send a signal — goes straight to your mail client</p>
               <div class="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label for="name" class="block font-mono text-xs text-ghost mb-2">NAME</label>
                   <input id="name" name="name" type="text" required placeholder="Ada Lovelace"
-                    class="w-full rounded-lg border border-line bg-void px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-purple-glow/60 transition" />
+                    class="w-full rounded-lg border border-purple-glow/30 bg-purple-glow/10 px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-purple-glow/60 transition" />
                 </div>
                 <div>
                   <label for="email" class="block font-mono text-xs text-ghost mb-2">EMAIL</label>
                   <input id="email" name="email" type="email" required placeholder="ada@dev.io"
-                    class="w-full rounded-lg border border-line bg-void px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-purple-glow/60 transition" />
+                    class="w-full rounded-lg border border-purple-glow/30 bg-purple-glow/10 px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-purple-glow/60 transition" />
                 </div>
               </div>
               <div class="mt-4 flex-grow">
                 <label for="message" class="block font-mono text-xs text-ghost mb-2">MESSAGE</label>
                 <textarea id="message" name="message" rows="5" required
                   placeholder="Let's talk about open source, AI, or your next product..."
-                  class="w-full h-full min-h-[120px] rounded-lg border border-line bg-void px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-purple-glow/60 transition resize-none"></textarea>
+                  class="w-full h-full min-h-[120px] rounded-lg border border-purple-glow/30 bg-purple-glow/10 px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-purple-glow/60 transition resize-none"></textarea>
               </div>
               <button type="submit"
                 class="magnetic-btn group mt-5 inline-flex w-full sm:w-auto items-center justify-center rounded-xl bg-purple-glow px-7 py-3.5 font-medium text-void hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] transition-shadow duration-300">
