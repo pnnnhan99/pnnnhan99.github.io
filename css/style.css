@@ -1,9 +1,9 @@
 :root {
-  --purple: #a855f7;
-  --matrix: #ec4899;
-  --purple-gradient: linear-gradient(135deg, #090212 0%, #100524 48%, #0b0318 100%);
-  --glassy-purple: linear-gradient(to bottom, rgba(24, 11, 42, 0.96) 0%, rgba(12, 5, 23, 0.97) 100%);
-  --glassy-border: 1px solid rgba(183, 75, 255, 0.3);
+  --neon: #25ff78;
+  --neon-soft: #8affb4;
+  --neon-gradient: linear-gradient(135deg, #020b07 0%, #061812 48%, #02100a 100%);
+  --glassy-green: linear-gradient(to bottom, rgba(16, 42, 29, 0.96) 0%, rgba(6, 21, 14, 0.97) 100%);
+  --glassy-border: 1px solid rgba(76, 255, 136, 0.3);
   --glassy-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -15,31 +15,56 @@ body {
   overflow-x: hidden;
 }
 
-/* Dark Purple Technology Theme Section Backgrounds */
+/* Deep Dark Green Technology Theme Section Backgrounds */
 #about {
-  background: linear-gradient(135deg, #090212 0%, #100524 48%, #0b0318 100%);
-  color: #f6edff;
+  background: linear-gradient(135deg, #020b07 0%, #061812 48%, #02100a 100%);
+  color: #dffff0;
 }
 
 #stack {
-  background: linear-gradient(135deg, #090212 0%, #100524 48%, #0b0318 100%);
-  color: #f6edff;
+  background: linear-gradient(135deg, #020b07 0%, #061812 48%, #02100a 100%);
+  color: #dffff0;
 }
 
 #projects {
-  background: linear-gradient(135deg, #090212 0%, #100524 48%, #0b0318 100%);
-  color: #f6edff;
+  background: linear-gradient(135deg, #020b07 0%, #061812 48%, #02100a 100%);
+  color: #dffff0;
 }
 
+/* Transparent on purpose: .bg-svg-stage sits behind #contact + <footer> and is
+   the only background layer, so the SVG runs continuously across both. */
 #contact {
-  background: linear-gradient(135deg, #090212 0%, #100524 48%, #0b0318 100%);
-  color: #f6edff;
+  color: #dffff0;
 }
 
-/* Glassy Purple Card Styles */
-.glassy-purple-card {
-  background: linear-gradient(to bottom, rgba(24, 11, 42, 0.96) 0%, rgba(12, 5, 23, 0.97) 100%);
-  border: 1px solid rgba(183, 75, 255, 0.3);
+/* One continuous animated SVG stage shared by #contact and the footer.
+   Single element + single opacity + single scrim = no seam at the boundary.
+   #contact and <footer> must stay transparent so this layer is what shows.
+   Fully opaque on purpose: #hero/#about/#stack stay pinned behind this area,
+   so any transparency would let the Architecture section bleed through.
+   The negative top inset also covers the sliver left above the wrapper. */
+.bg-svg-stage {
+  position: absolute;
+  inset: -48px 0 0 0;
+  z-index: 0;
+  opacity: 1;
+  background-image:
+    linear-gradient(to bottom,
+      rgba(6, 21, 14, 0.18) 0%,
+      rgba(2, 11, 7, 0.05) 45%,
+      rgba(2, 11, 7, 0.3) 100%),
+    url("../img/background.svg"),
+    linear-gradient(135deg, #020b07 0%, #061812 48%, #02100a 100%);
+  background-size: 100% 100%, cover, 100% 100%;
+  background-position: center, center, center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+/* Glassy Dark Green Card Styles */
+.glassy-green-card {
+  background: linear-gradient(to bottom, rgba(16, 42, 29, 0.96) 0%, rgba(6, 21, 14, 0.97) 100%);
+  border: 1px solid rgba(76, 255, 136, 0.3);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -57,71 +82,71 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #05070a;
+  background: #020b07;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1c2636;
+  background: #122a1e;
   border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a855f755;
+  background: #25ff7855;
 }
 
 ::-moz-selection {
-  background: rgba(168, 85, 247, 0.3);
+  background: rgba(37, 255, 120, 0.3);
 }
 
 .nav-link.active {
   color: #fff;
-  background: rgba(168, 85, 247, 0.07);
-  box-shadow: inset 0 -2px 0 0 var(--purple);
+  background: rgba(37, 255, 120, 0.07);
+  box-shadow: inset 0 -2px 0 0 var(--neon);
 }
 
 .tag {
   display: inline-flex;
   align-items: center;
   border-radius: 9999px;
-  border: 1px solid rgba(168, 85, 247, 0.25);
-  background: rgba(168, 85, 247, 0.07);
+  border: 1px solid rgba(37, 255, 120, 0.25);
+  background: rgba(37, 255, 120, 0.07);
   padding: 0.2rem 0.65rem;
   font-family: "JetBrains Mono", monospace;
   font-size: 0.68rem;
-  color: #e9d5ff;
+  color: #c9ffe0;
   transition: all 0.25s ease;
 }
 
 .tag:hover {
-  border-color: rgba(168, 85, 247, 0.6);
+  border-color: rgba(37, 255, 120, 0.6);
   transform: translateY(-1px);
 }
 
 .tag-green {
-  border-color: rgba(236, 72, 153, 0.28);
-  background: rgba(236, 72, 153, 0.07);
-  color: #fbcfe8;
+  border-color: rgba(138, 255, 180, 0.28);
+  background: rgba(138, 255, 180, 0.07);
+  color: #d6ffe8;
 }
 
 .tag-green:hover {
-  border-color: rgba(236, 72, 153, 0.65);
+  border-color: rgba(138, 255, 180, 0.65);
 }
 
 .tag-blue {
-  border-color: rgba(192, 132, 252, 0.28);
-  background: rgba(192, 132, 252, 0.07);
-  color: #e9d5ff;
+  border-color: rgba(57, 255, 130, 0.28);
+  background: rgba(57, 255, 130, 0.07);
+  color: #c9ffe0;
 }
 
 .tag-blue:hover {
-  border-color: rgba(192, 132, 252, 0.65);
+  border-color: rgba(57, 255, 130, 0.65);
 }
 
 #navbar.scrolled {
-  background: rgba(5, 7, 10, 0.82);
+  background: rgba(2, 11, 7, 0.82);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom-color: #161d29;
+  border-bottom-color: #122a1e;
 }
 
 @keyframes blink {
@@ -187,7 +212,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%), rgba(168, 85, 247, 0.06), transparent 45%);
+  background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%), rgba(37, 255, 120, 0.06), transparent 45%);
   opacity: 0;
   transition: opacity 0.35s ease;
   pointer-events: none;
@@ -204,7 +229,7 @@ body {
 
 input:focus,
 textarea:focus {
-  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.12);
+  box-shadow: 0 0 0 3px rgba(37, 255, 120, 0.12);
 }
 
 /* Sticky stacking sections handled by Tailwind classes */

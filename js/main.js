@@ -227,7 +227,7 @@
             if (!dot) continue;
             if (i === idx) {
               dot.style.width = '24px';
-              dot.style.backgroundColor = 'var(--color-purple-glow, #a855f7)';
+              dot.style.backgroundColor = 'var(--color-neon-glow, #25ff78)';
             } else {
               dot.style.width = '8px';
               dot.style.backgroundColor = '';
@@ -281,7 +281,7 @@
           vx: (Math.random() - 0.5) * 0.45,
           vy: (Math.random() - 0.5) * 0.45,
           r: Math.random() * 1.6 + 0.8,
-          hue: Math.random() > 0.72 ? '236, 72, 153' : '168, 85, 247'
+          hue: Math.random() > 0.72 ? '138, 255, 180' : '37, 255, 120'
         });
       }
     }
@@ -317,7 +317,7 @@
             ctx.beginPath();
             ctx.moveTo(n.x, n.y);
             ctx.lineTo(m.x, m.y);
-            ctx.strokeStyle = 'rgba(168, 85, 247, ' + alpha + ')';
+            ctx.strokeStyle = 'rgba(37, 255, 120, ' + alpha + ')';
             ctx.lineWidth = 0.7;
             ctx.stroke();
           }
@@ -333,7 +333,7 @@
           ctx.beginPath();
           ctx.moveTo(n.x, n.y);
           ctx.lineTo(mouse.x, mouse.y);
-          ctx.strokeStyle = 'rgba(168, 85, 247, 0.14)';
+          ctx.strokeStyle = 'rgba(37, 255, 120, 0.14)';
           ctx.lineWidth = 0.6;
           ctx.stroke();
         }

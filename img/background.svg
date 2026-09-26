@@ -2,14 +2,14 @@
   <defs>
     <!-- 1. Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#090212" />
-      <stop offset="50%" stop-color="#100524" />
-      <stop offset="100%" stop-color="#0b0318" />
+      <stop offset="0%" stop-color="#020b07" />
+      <stop offset="50%" stop-color="#061812" />
+      <stop offset="100%" stop-color="#02100a" />
     </linearGradient>
 
     <!-- 2. Grid Pattern -->
     <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
-      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="rgba(139, 92, 246, 0.25)" stroke-width="1.5" />
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="rgba(76, 255, 136, 0.25)" stroke-width="1.5" />
     </pattern>
 
     <!-- 3. Glow Filter for Particles -->
@@ -25,7 +25,7 @@
     <!-- 4. Soft Vignette (Shadow on edges) -->
     <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
       <stop offset="70%" stop-color="transparent" stop-opacity="0" />
-      <stop offset="100%" stop-color="#090212" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#020b07" stop-opacity="0.5" />
     </radialGradient>
   </defs>
 
@@ -43,22 +43,22 @@
 
   <!-- Render Particles (Hạt dữ liệu) -->
   <g filter="url(#glow)">
-    <!-- Hạt Tím (Purple) - Góc trái trên -->
-    <circle cx="100" cy="100" r="4" fill="#a855f7">
+    <!-- Hạt Xanh Neon (Neon Green) - Góc trái trên -->
+    <circle cx="100" cy="100" r="4" fill="#25ff78">
       <animate attributeName="cy" values="100; 500; 100" dur="25s" repeatCount="indefinite" />
       <animate attributeName="cx" values="100; 300; 100" dur="30s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0.2; 1; 0.2" dur="5s" repeatCount="indefinite" />
     </circle>
 
-    <!-- Hạt Hồng Sáng (Light Pink) - Góc phải trên -->
-    <circle cx="1800" cy="150" r="5" fill="#f472b6">
+    <!-- Hạt Xanh Sáng (Light Green) - Góc phải trên -->
+    <circle cx="1800" cy="150" r="5" fill="#8affb4">
       <animate attributeName="cy" values="150; 700; 150" dur="20s" repeatCount="indefinite" />
       <animate attributeName="cx" values="1800; 1500; 1800" dur="28s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0.3; 0.9; 0.3" dur="4s" repeatCount="indefinite" />
     </circle>
 
-    <!-- Hạt Hồng (Pink) - Góc trái dưới -->
-    <circle cx="200" cy="950" r="3.5" fill="#ec4899">
+    <!-- Hạt Xanh (Green) - Góc trái dưới -->
+    <circle cx="200" cy="950" r="3.5" fill="#39ff82">
       <animate attributeName="cy" values="950; 500; 950" dur="35s" repeatCount="indefinite" />
       <animate attributeName="cx" values="200; 400; 200" dur="22s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0.1; 1; 0.1" dur="6s" repeatCount="indefinite" />
@@ -71,29 +71,29 @@
       <animate attributeName="opacity" values="0.4; 1; 0.4" dur="3s" repeatCount="indefinite" />
     </circle>
 
-    <!-- Hạt Violet - Góc phải giữa -->
-    <circle cx="1500" cy="500" r="4.5" fill="#8b5cf6">
+    <!-- Hạt Xanh Trăm - Góc phải giữa -->
+    <circle cx="1500" cy="500" r="4.5" fill="#25ff78">
       <animate attributeName="cy" values="500; 200; 500" dur="22s" repeatCount="indefinite" />
       <animate attributeName="cx" values="1500; 1800; 1500" dur="19s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0.2; 0.8; 0.2" dur="4.5s" repeatCount="indefinite" />
     </circle>
 
-    <!-- Hạt Tím Nhạt - Góc trái giữa -->
-    <circle cx="400" cy="600" r="3.5" fill="#c084fc">
+    <!-- Hạt Xanh Nhạt - Góc trái giữa -->
+    <circle cx="400" cy="600" r="3.5" fill="#b6ffd6">
       <animate attributeName="cy" values="600; 100; 600" dur="28s" repeatCount="indefinite" />
       <animate attributeName="cx" values="400; 100; 400" dur="24s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0.3; 0.7; 0.3" dur="5.5s" repeatCount="indefinite" />
     </circle>
 
-    <!-- Hạt Hồng Đậm - Giữa trên -->
-    <circle cx="960" cy="100" r="4" fill="#db2777">
+    <!-- Hạt Xanh Đậm - Giữa trên -->
+    <circle cx="960" cy="100" r="4" fill="#39ff82">
       <animate attributeName="cy" values="100; 400; 100" dur="21s" repeatCount="indefinite" />
       <animate attributeName="cx" values="960; 700; 960" dur="26s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0.2; 0.8; 0.2" dur="4s" repeatCount="indefinite" />
     </circle>
 
-    <!-- Hạt Tím Đậm - Giữa dưới -->
-    <circle cx="960" cy="950" r="4.5" fill="#7c3aed">
+    <!-- Hạt Xanh Mạnh - Giữa dưới -->
+    <circle cx="960" cy="950" r="4.5" fill="#8affb4">
       <animate attributeName="cy" values="950; 600; 950" dur="32s" repeatCount="indefinite" />
       <animate attributeName="cx" values="960; 1200; 960" dur="27s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0.15; 0.75; 0.15" dur="6s" repeatCount="indefinite" />
