@@ -37,12 +37,6 @@ body {
   color: #dffff0;
 }
 
-/* One continuous animated SVG stage shared by #contact and the footer.
-   Single element + single opacity + single scrim = no seam at the boundary.
-   #contact and <footer> must stay transparent so this layer is what shows.
-   Fully opaque on purpose: #hero/#about/#stack stay pinned behind this area,
-   so any transparency would let the Architecture section bleed through.
-   The negative top inset also covers the sliver left above the wrapper. */
 .bg-svg-stage {
   position: absolute;
   inset: -48px 0 0 0;
